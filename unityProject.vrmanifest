@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.test.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "C:\\Unity Projects\\vxr_escape_mike\\vxr_escape\\VR Escape Room\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "Test [Testing]"
+        }
+      }
+    }
+  ]
+}
