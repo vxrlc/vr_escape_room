@@ -6,7 +6,7 @@ using Valve.VR;
 public class buttonPress : MonoBehaviour
 {
     public int keyNum;
-    public Animator keyAnimation;
+   //public Animator keyAnimation;
     public GameObject safe;
 
     private SafeCombo ComboScript;
@@ -19,9 +19,18 @@ public class buttonPress : MonoBehaviour
     }
    public void NumberPress()
     {
-        Debug.Log("press");
-       // ComboScript = safe.GetComponent<SafeCombo>();
-      
-       
+       ComboScript = safe.GetComponent<SafeCombo>();
+        ComboScript.NumberGuess(keyNum);
+    }
+
+    public void ClearGuess()
+    {
+        ComboScript = safe.GetComponent<SafeCombo>();
+        ComboScript.ClearGuess();
+    }
+    public void SubmitGuess()
+    {
+        ComboScript = safe.GetComponent<SafeCombo>();
+        ComboScript.SubmitGuess();
     }
 }
