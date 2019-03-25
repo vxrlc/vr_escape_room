@@ -61,7 +61,7 @@ public void NumberGuess(int NumberKey)
             if (GuessNumbersArray[i] == 0)
             {
                 GuessNumbersArray[i] = NumberKey;
-               // Debug.Log("Combo: " + ComboNumArray[i] + "Guess: " + GuessNumbersArray[i]);
+               Debug.Log("Combo: " + ComboNumArray[i] + "Guess: " + GuessNumbersArray[i]);
                 break;
             }
         }

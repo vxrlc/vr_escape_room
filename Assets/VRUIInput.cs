@@ -38,6 +38,8 @@ public class VRUIInput : MonoBehaviour
    // }
   private void HandlePointerClick(object sender, PointerEventArgs e)
     {
+       
+        Debug.Log("HandlePointerIn" + e.target.gameObject.name);
         var button = e.target.GetComponent<Button>();
         if (button != null)
         {
@@ -47,12 +49,13 @@ public class VRUIInput : MonoBehaviour
 
     }
     private void HandlePointerIn(object sender, PointerEventArgs e)
-    {  
+    {
+        //Debug.Log("HandlePointerIn" + e.target.gameObject.name);
         var button = e.target.GetComponent<Button>();
         if (button != null)
         {
             button.Select();
-           // Debug.Log("HandlePointerIn", e.target.gameObject);
+        
         } else
         {
            
