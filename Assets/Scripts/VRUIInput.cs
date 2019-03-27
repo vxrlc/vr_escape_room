@@ -8,6 +8,8 @@ using Valve.VR;
 public class VRUIInput : MonoBehaviour
 {
     private SteamVR_LaserPointer laserPointer;
+    public SteamVR_Input_Sources handType;
+    public SteamVR_Action_Boolean PointerActivate;
 
    
     private void OnEnable()
@@ -29,14 +31,25 @@ public class VRUIInput : MonoBehaviour
        // trackedController.TriggerClicked += HandleTriggerClicked;
     }
 
-   // private void HandleTriggerClicked(object sender, ClickedEventArgs e)
-   // {
-       //if (EventSystem.current.currentSelectedGameObject != null)
-      // {
-     //      ExecuteEvents.Execute(EventSystem.current.currentSelectedGameObject, new PointerEventData(EventSystem.current), ExecuteEvents.submitHandler);
-     // }
-   // }
-  private void HandlePointerClick(object sender, PointerEventArgs e)
+    // private void HandleTriggerClicked(object sender, ClickedEventArgs e)
+    // {
+    //if (EventSystem.current.currentSelectedGameObject != null)
+    // {
+    //      ExecuteEvents.Execute(EventSystem.current.currentSelectedGameObject, new PointerEventData(EventSystem.current), ExecuteEvents.submitHandler);
+    // }
+    // }
+    private void Update()
+    {
+        if (PointerActivate.GetState(handType))
+        {
+            laserPointer.holder.SetActive(true);
+        }
+        else
+        {
+            laserPointer.holder.SetActive(false);
+        }
+    }
+    private void HandlePointerClick(object sender, PointerEventArgs e)
     {
        
         Debug.Log("HandlePointerIn" + e.target.gameObject.name);
@@ -54,11 +67,7 @@ public class VRUIInput : MonoBehaviour
         var button = e.target.GetComponent<Button>();
         if (button != null)
         {
-            button.Select();
-        
-        } else
-        {
-           
+            button.OnSelect(null);
         }
     }
 
@@ -68,7 +77,7 @@ public class VRUIInput : MonoBehaviour
         var button = e.target.GetComponent<Button>();
         if (button != null)
         {
-            
+            button.OnDeselect(null);
            // Debug.Log("HandlePointerOut", e.target.gameObject);
         }
     }
