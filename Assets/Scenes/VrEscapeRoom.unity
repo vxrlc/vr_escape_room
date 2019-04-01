@@ -1008,6 +1008,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 300
   countDownText: {fileID: 1890351045}
+  formattedTime: 
+  gamePaused: 0
 --- !u!4 &425595809
 Transform:
   m_ObjectHideFlags: 0
@@ -5261,6 +5263,26 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 4388216527542094411, guid: 4a231370a7882a340bf7daa249f633b0,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 425595808}
+    - target: {fileID: 4698454352344418407, guid: 4a231370a7882a340bf7daa249f633b0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3652056284190026764, guid: 4a231370a7882a340bf7daa249f633b0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2060182893537154971, guid: 4a231370a7882a340bf7daa249f633b0,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 425595808}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a231370a7882a340bf7daa249f633b0, type: 3}
 --- !u!1001 &6336176286609107139

@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 {
     public float timer;
     public Text countDownText;
+    public string formattedTime;
+    public bool gamePaused = false;
     private void Update()
     {
         timer -= Time.deltaTime;
@@ -15,7 +17,7 @@ public class GameManager : MonoBehaviour
         int minutes = Mathf.FloorToInt((timer % 3600) / 60);
         int seconds = Mathf.FloorToInt(timer % 60);
 
-        string formattedTime = string.Format("{0:00}:{1:00}:{2:00}", hours, minutes, seconds);
+        formattedTime = string.Format("{0:00}:{1:00}:{2:00}", hours, minutes, seconds);
 
         countDownText.text = formattedTime;
     }
