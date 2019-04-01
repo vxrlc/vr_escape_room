@@ -28,6 +28,9 @@ ModelImporter:
     100044: windowFrameSm1
     100046: windowFrameSm2
     100048: windowFrameSm3
+    100050: _6_Key
+    100052: classroomWhole
+    100054: pCube1
     400000: Ceiling
     400002: celingMain
     400004: //RootNode
@@ -53,7 +56,13 @@ ModelImporter:
     400044: windowFrameSm1
     400046: windowFrameSm2
     400048: windowFrameSm3
+    400050: _6_Key
+    400052: classroomWhole
+    400054: pCube1
     2100000: lambert1
+    2100002: lambert7
+    2100004: TempMaterial1
+    2100006: lambert8
     2300000: celingMain
     2300002: floor
     2300004: floor1
@@ -72,6 +81,8 @@ ModelImporter:
     2300030: windowFrameSm1
     2300032: windowFrameSm2
     2300034: windowFrameSm3
+    2300036: _6_Key
+    2300038: pCube1
     3300000: celingMain
     3300002: floor
     3300004: floor1
@@ -90,6 +101,8 @@ ModelImporter:
     3300030: windowFrameSm1
     3300032: windowFrameSm2
     3300034: windowFrameSm3
+    3300036: _6_Key
+    3300038: pCube1
     4300000: windowFrameReg
     4300002: windowFrameReg2
     4300004: windowFrameReg3
@@ -108,6 +121,8 @@ ModelImporter:
     4300030: celingMain
     4300032: floor1
     4300034: floor
+    4300036: _6_Key
+    4300038: pCube1
   externalObjects: {}
   materials:
     importMaterials: 1
