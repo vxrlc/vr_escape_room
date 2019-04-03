@@ -6,16 +6,27 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public float timer;
+    public float startTime;
     public Text countDownText;
     public string formattedTime;
     public bool gamePaused = false;
+    public bool winGame = false;
+    public int hours;
+    public int minutes;
+    public int seconds;
+
+    private void Start()
+    {
+        startTime = timer;
+      
+    }
     private void Update()
     {
         timer -= Time.deltaTime;
 
-        int hours = Mathf.FloorToInt(timer / 3600F);
-        int minutes = Mathf.FloorToInt((timer % 3600) / 60);
-        int seconds = Mathf.FloorToInt(timer % 60);
+        hours = Mathf.FloorToInt(timer / 3600F);
+        minutes = Mathf.FloorToInt((timer % 3600) / 60);
+        seconds = Mathf.FloorToInt(timer % 60);
 
         formattedTime = string.Format("{0:00}:{1:00}:{2:00}", hours, minutes, seconds);
 

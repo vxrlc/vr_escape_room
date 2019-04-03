@@ -6,9 +6,9 @@ using UnityEngine.UI;
 public class PlayerInfo
 {
     public string name;
-    public string time;
+    public float time;
 
-    public PlayerInfo(string name, string time)
+    public PlayerInfo(string name, float time)
     {
         this.name = name;
         this.time = time;
@@ -17,15 +17,23 @@ public class PlayerInfo
 }
 public class leaderBoard : MonoBehaviour
 {
-    public InputField userName;
+    public Text userName;
     public Text display;
     public GameManager gameManager;
+    private string formattedTime;
+
+    private int start;
+    private int end;
+
+    private float recordTime;
+    
 
     List<PlayerInfo> collectedStats;
 
     // Start is called before the first frame update
     void Start()
     {
+      
         collectedStats = new List<PlayerInfo>();
        LoadLeaderBoard();
         if (gameManager.gamePaused)
@@ -36,10 +44,12 @@ public class leaderBoard : MonoBehaviour
             this.enabled = false;
         }
     }
-
+    
     public void SubmitButton()
     {
-        PlayerInfo stats = new PlayerInfo(userName.text, gameManager.formattedTime);
+
+        recordTime = gameManager.startTime - gameManager.timer;
+        PlayerInfo stats = new PlayerInfo(userName.text, recordTime);
         collectedStats.Add(stats);
         userName.text = "";
       
@@ -49,11 +59,7 @@ public class leaderBoard : MonoBehaviour
     {
         for(int i = collectedStats.Count - 1; i > 0; i--)
         {
-            int timeCurrent;
-            int timePrevious;
-            int.TryParse(collectedStats[i].time, out timeCurrent);
-            int.TryParse(collectedStats[i - 1].time, out timePrevious);
-            if (timeCurrent > timePrevious)
+            if (collectedStats[i].time < collectedStats[i-1].time)
             {
                 PlayerInfo tempInfo = collectedStats[i - 1];
 
@@ -70,7 +76,7 @@ public class leaderBoard : MonoBehaviour
         for (int i = 0; i < collectedStats.Count; i++)
         {
             stats += collectedStats[i].name + ",";
-            stats += collectedStats[i].time + ",";
+            stats += collectedStats[i].time.ToString() + ",";
 
             PlayerPrefs.SetString("Leaderboards", stats);
 
@@ -83,7 +89,11 @@ public class leaderBoard : MonoBehaviour
 
         for (int i = 0; i <= collectedStats.Count - 1; i++)
         {
-            display.text += collectedStats[i].name + ": " + collectedStats[i].time + "\n";
+            int hours = Mathf.FloorToInt(collectedStats[i].time / 3600F);
+            int minutes = Mathf.FloorToInt((collectedStats[i].time % 3600) / 60);
+            int seconds = Mathf.FloorToInt(collectedStats[i].time % 60);
+            formattedTime = string.Format("{0:00}:{1:00}:{2:00}", hours, minutes, seconds);
+            display.text += collectedStats[i].name + ": " + formattedTime + "\n";
         }
     }
     void LoadLeaderBoard()
@@ -94,7 +104,7 @@ public class leaderBoard : MonoBehaviour
 
         for (int i = 0; i < stats2.Length - 2; i += 2)
         {
-            PlayerInfo loadedInfo = new PlayerInfo(stats2[i],stats2[i+1]);
+            PlayerInfo loadedInfo = new PlayerInfo(stats2[i],float.Parse(stats2[i+1]));
 
             collectedStats.Add(loadedInfo);
 
