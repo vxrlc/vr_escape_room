@@ -14,6 +14,9 @@ public class GameManager : MonoBehaviour
     public int hours;
     public int minutes;
     public int seconds;
+    public GameObject vent;
+
+    public int screwsUnscrewed = 0;
 
     private void Start()
     {
@@ -31,5 +34,10 @@ public class GameManager : MonoBehaviour
         formattedTime = string.Format("{0:00}:{1:00}:{2:00}", hours, minutes, seconds);
 
         countDownText.text = formattedTime;
+        Debug.Log(screwsUnscrewed);
+        if (screwsUnscrewed == 2)
+        {
+            vent.GetComponent<BoxCollider>().enabled = true;
+        }
     }
 }
