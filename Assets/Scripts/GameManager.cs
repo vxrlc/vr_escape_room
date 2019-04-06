@@ -15,13 +15,24 @@ public class GameManager : MonoBehaviour
     public int minutes;
     public int seconds;
     public GameObject vent;
+    public bool isHolding = false;
 
     public int screwsUnscrewed = 0;
 
     private void Start()
     {
         startTime = timer;
-      
+
+    }
+    public void toggleHolding()
+    {
+        if (isHolding)
+        {
+            isHolding = false;
+        } else if (!isHolding)
+        {
+            isHolding = true;
+        }
     }
     private void Update()
     {

@@ -10,8 +10,9 @@ public class VRUIInput : MonoBehaviour
     private SteamVR_LaserPointer laserPointer;
     public SteamVR_Input_Sources handType;
     public SteamVR_Action_Boolean PointerActivate;
+    public GameManager gameManager;
 
-   
+
     private void OnEnable()
     {
         laserPointer = GetComponent<SteamVR_LaserPointer>();
@@ -19,28 +20,13 @@ public class VRUIInput : MonoBehaviour
         laserPointer.PointerIn += HandlePointerIn;
         laserPointer.PointerOut -= HandlePointerOut;
         laserPointer.PointerOut += HandlePointerOut;
-       laserPointer.PointerClick -= HandlePointerClick;
-       laserPointer.PointerClick += HandlePointerClick;
+        laserPointer.PointerClick -= HandlePointerClick;
+        laserPointer.PointerClick += HandlePointerClick;
 
-        //trackedController = GetComponent<SteamVR_TrackedController>();
-       // if (trackedController == null)
-       // {
-        //    trackedController = GetComponentInParent<SteamVR_TrackedController>();
-       // }
-       //trackedController.TriggerClicked -= HandleTriggerClicked;
-       // trackedController.TriggerClicked += HandleTriggerClicked;
     }
-
-    // private void HandleTriggerClicked(object sender, ClickedEventArgs e)
-    // {
-    //if (EventSystem.current.currentSelectedGameObject != null)
-    // {
-    //      ExecuteEvents.Execute(EventSystem.current.currentSelectedGameObject, new PointerEventData(EventSystem.current), ExecuteEvents.submitHandler);
-    // }
-    // }
     private void Update()
     {
-        if (PointerActivate.GetState(handType))
+        if (PointerActivate.GetState(handType) && !gameManager.isHolding)
         {
             laserPointer.holder.SetActive(true);
         }
