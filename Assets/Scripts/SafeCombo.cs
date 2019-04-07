@@ -22,7 +22,7 @@ public class SafeCombo : MonoBehaviour
         {
             ComboNumArray[i] = ComboRandomNumber();
             Combo += ComboNumArray[i].ToString();
-            Debug.Log(ComboNumArray[i]);
+           // Debug.Log(ComboNumArray[i]);
         }
     }
 
@@ -67,7 +67,7 @@ public void NumberGuess(int NumberKey)
             {
                 GuessNumbersArray[i] = NumberKey;
                 GuessNumberDisplay.text += GuessNumbersArray[i] + " ";
-               Debug.Log("Combo: " + ComboNumArray[i] + "Guess: " + GuessNumbersArray[i]);
+              // Debug.Log("Combo: " + ComboNumArray[i] + "Guess: " + GuessNumbersArray[i]);
                 break;
             }
         }

@@ -26,6 +26,7 @@ public class VRUIInput : MonoBehaviour
     }
     private void Update()
     {
+       
         if (PointerActivate.GetState(handType) && !gameManager.isHolding)
         {
             laserPointer.holder.SetActive(true);
@@ -38,7 +39,7 @@ public class VRUIInput : MonoBehaviour
     private void HandlePointerClick(object sender, PointerEventArgs e)
     {
        
-        Debug.Log("HandlePointerIn" + e.target.gameObject.name);
+       // Debug.Log("HandlePointerIn" + e.target.gameObject.name);
         var button = e.target.GetComponent<Button>();
         if (button != null)
         {

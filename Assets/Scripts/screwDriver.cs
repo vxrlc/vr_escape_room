@@ -14,15 +14,23 @@ public class screwDriver : MonoBehaviour
 
     private Quaternion trigSRot;
     private Interactable interactable;
-    public float rotation = 0;  
+    private GameManager gameManager;
+    public float rotation = 0;
+    public BoxCollider pickUpCollider;
 
     // Start is called before the first frame update
     void Start()
     {
         interactable = GetComponent<Interactable>();
         trigSRot = modelTrigger.localRotation;
-    }
+        gameManager = FindObjectOfType<GameManager>() as GameManager;
 
+    }
+    public void toggleHandle()
+    {
+        pickUpCollider.enabled = false;
+        gameManager.toggleHolding();
+    }
     // Update is called once per frame
     void Update()
     {

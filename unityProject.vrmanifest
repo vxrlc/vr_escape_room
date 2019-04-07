@@ -5,7 +5,7 @@
       "app_key": "application.generated.unity.test.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "C:\\Unity Projects\\vr_escape_room_mike\\vr_escape_room\\actions.json",
+      "action_manifest_path": "C:\\Users\\s0121586\\Documents\\GitHub\\vr_escape_room\\actions.json",
       "strings": {
         "en_us": {
           "name": "Test [Testing]"

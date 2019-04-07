@@ -16,13 +16,25 @@ public class GameManager : MonoBehaviour
     public int seconds;
     public GameObject vent;
     public bool isHolding = false;
+    private int index;
+
+    public GameObject[] drillSpawnPoints;
+    public GameObject drillPrefab;
 
     public int screwsUnscrewed = 0;
 
     private void Start()
     {
         startTime = timer;
+        spawnDrill();
 
+    }
+    void spawnDrill()
+    {
+        index = Random.Range(0, drillSpawnPoints.Length);
+        Instantiate(drillPrefab, drillSpawnPoints[index].transform.position, drillPrefab.transform.rotation);
+        drillPrefab.transform.SetParent(drillSpawnPoints[index].transform, false);
+        Debug.Log("spawn index: " + index);
     }
     public void toggleHolding()
     {
@@ -45,7 +57,7 @@ public class GameManager : MonoBehaviour
         formattedTime = string.Format("{0:00}:{1:00}:{2:00}", hours, minutes, seconds);
 
         countDownText.text = formattedTime;
-        Debug.Log(screwsUnscrewed);
+        
         if (screwsUnscrewed == 2)
         {
             vent.GetComponent<BoxCollider>().enabled = true;
