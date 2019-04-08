@@ -82,7 +82,7 @@ namespace Valve.VR.InteractionSystem
 		private bool teleporting = false;
 		private float currentFadeTime = 0.0f;
 
-		private float meshAlphaPercent = 1.0f;
+        private float meshAlphaPercent = 0.0f; //1.0f;
 		private float pointerShowStartTime = 0.0f;
 		private float pointerHideStartTime = 0.0f;
 		private bool meshFading = false;
@@ -766,12 +766,12 @@ namespace Valve.VR.InteractionSystem
 			float deltaTime = Time.time - pointerShowStartTime;
 			if ( deltaTime > meshFadeTime )
 			{
-				meshAlphaPercent = 1.0f;
+                meshAlphaPercent = 0.0f; // 1.0f;
 				meshFading = false;
 			}
 			else
 			{
-				meshAlphaPercent = Mathf.Lerp( 0.0f, 1.0f, deltaTime / meshFadeTime );
+                meshAlphaPercent = 0.0f; // Mathf.Lerp( 0.0f, 1.0f, deltaTime / meshFadeTime );
 			}
 
 			//Tint color for the teleport points

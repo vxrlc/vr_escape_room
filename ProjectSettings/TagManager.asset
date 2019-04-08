@@ -10,6 +10,8 @@ TagManager:
   - Red
   - Blue
   - Green
+  - Shelf
+  - Drill
   layers:
   - Default
   - TransparentFX

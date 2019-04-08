@@ -42,8 +42,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5530841, y: 0.37963054, z: 0.44628266}
-  m_Center: {x: 0.22345734, y: 0.001707502, z: -0.030918794}
+  m_Size: {x: 0.44621086, y: 0.37963054, z: 0.44628266}
+  m_Center: {x: 0.17002058, y: 0.0017074959, z: -0.030918794}
 --- !u!1 &5101159524632464001
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,7 +354,7 @@ GameObject:
   - component: {fileID: 1297001412730238826}
   m_Layer: 0
   m_Name: screwdriver
-  m_TagString: Untagged
+  m_TagString: Drill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -436,7 +436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   modelTrigger: {fileID: 5101159524632762027}
-  triggerRot: 10
+  triggerRot: 15
   drillBit: {fileID: 5101159524632762021}
   squeeze: 0
   actionSqueeze:

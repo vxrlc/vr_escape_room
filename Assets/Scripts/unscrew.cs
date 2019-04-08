@@ -8,9 +8,9 @@ public class unscrew : MonoBehaviour
     public Rigidbody rigidBody;
     public GameManager gameManager;
     private bool screwOut = false;
-    public GameObject drill; 
     private void OnTriggerEnter(Collider other)
     {
+ 
         if (other.transform.name == "drillBit")
         {
             screwdriver = true;
@@ -20,11 +20,6 @@ public class unscrew : MonoBehaviour
     {
         screwdriver = false;
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void FixedUpdate()
@@ -33,8 +28,8 @@ public class unscrew : MonoBehaviour
         if (screwdriver)
         {
 
-            transform.Rotate(0, drill.GetComponent<screwDriver>().rotation * -1, 0, Space.Self);     
-           transform.localPosition = new Vector3(transform.localPosition.x + (0.05f  * (drill.GetComponent<screwDriver>().squeeze/5)), transform.localPosition.y, transform.localPosition.z);
+            transform.Rotate(0, gameManager.drillRotation * -1, 0, Space.Self);     
+           transform.localPosition = new Vector3(transform.localPosition.x + (0.05f  * (gameManager.drillTriggerSqueeze/5)), transform.localPosition.y, transform.localPosition.z);
         }
         
         if (transform.localPosition.x >= 0.13f && !screwOut)

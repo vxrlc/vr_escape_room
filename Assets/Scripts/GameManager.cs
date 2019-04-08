@@ -18,6 +18,9 @@ public class GameManager : MonoBehaviour
     public bool isHolding = false;
     private int index;
 
+    public float drillRotation;
+    public float drillTriggerSqueeze;
+
     public GameObject[] drillSpawnPoints;
     public GameObject drillPrefab;
 
@@ -31,11 +34,13 @@ public class GameManager : MonoBehaviour
     }
     void spawnDrill()
     {
+        // create a random number for one the spawn points
         index = Random.Range(0, drillSpawnPoints.Length);
+        // spawn the drill at one of the random spawn points
         Instantiate(drillPrefab, drillSpawnPoints[index].transform.position, drillPrefab.transform.rotation);
-        drillPrefab.transform.SetParent(drillSpawnPoints[index].transform, false);
-        Debug.Log("spawn index: " + index);
+        //drillPrefab.transform.SetParent(drillSpawnPoints[index].transform, false);
     }
+    // determine if the player is holding an object - this is used to disable the laser pointer
     public void toggleHolding()
     {
         if (isHolding)
@@ -48,6 +53,7 @@ public class GameManager : MonoBehaviour
     }
     private void Update()
     {
+        // countdown timer logic
         timer -= Time.deltaTime;
 
         hours = Mathf.FloorToInt(timer / 3600F);
@@ -57,7 +63,7 @@ public class GameManager : MonoBehaviour
         formattedTime = string.Format("{0:00}:{1:00}:{2:00}", hours, minutes, seconds);
 
         countDownText.text = formattedTime;
-        
+        // determine if both screws in the vent are unscrewed, if so, enable the collider on the vent to open
         if (screwsUnscrewed == 2)
         {
             vent.GetComponent<BoxCollider>().enabled = true;

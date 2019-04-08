@@ -22,11 +22,10 @@ public class VRUIInput : MonoBehaviour
         laserPointer.PointerOut += HandlePointerOut;
         laserPointer.PointerClick -= HandlePointerClick;
         laserPointer.PointerClick += HandlePointerClick;
-
     }
     private void Update()
     {
-       
+       // if the PointerActivate action is enable and the player is not holding an object enable the laser pointer
         if (PointerActivate.GetState(handType) && !gameManager.isHolding)
         {
             laserPointer.holder.SetActive(true);
@@ -36,6 +35,7 @@ public class VRUIInput : MonoBehaviour
             laserPointer.holder.SetActive(false);
         }
     }
+    // if the laser pointer hits a button, invoke a button press
     private void HandlePointerClick(object sender, PointerEventArgs e)
     {
        
@@ -45,11 +45,10 @@ public class VRUIInput : MonoBehaviour
         {
             button.onClick.Invoke();
         }
-        
-
     }
     private void HandlePointerIn(object sender, PointerEventArgs e)
     {
+        // pass a highlight message to buttons the laser pointer is hovering over
         //Debug.Log("HandlePointerIn" + e.target.gameObject.name);
         var button = e.target.GetComponent<Button>();
         if (button != null)
@@ -57,10 +56,9 @@ public class VRUIInput : MonoBehaviour
             button.OnSelect(null);
         }
     }
-
+    // disable hover effect of buttons when the laser pointer is not hovering over the button
     private void HandlePointerOut(object sender, PointerEventArgs e)
     {
-
         var button = e.target.GetComponent<Button>();
         if (button != null)
         {

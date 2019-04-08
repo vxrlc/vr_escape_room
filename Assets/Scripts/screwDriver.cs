@@ -26,6 +26,7 @@ public class screwDriver : MonoBehaviour
         gameManager = FindObjectOfType<GameManager>() as GameManager;
 
     }
+    // function to indicate the drill is being held, used to prevent laser pointer from being used
     public void toggleHandle()
     {
         pickUpCollider.enabled = false;
@@ -43,11 +44,10 @@ public class screwDriver : MonoBehaviour
             squeeze = actionSqueeze.GetAxis(hand);
            
         }
-     
-
         modelTrigger.localRotation = trigSRot;
         modelTrigger.Rotate(squeeze * triggerRot, 0, 0, Space.Self);
-        rotation = squeeze * triggerRot;
+        gameManager.drillRotation = squeeze * triggerRot;
+        gameManager.drillTriggerSqueeze = squeeze;
         drillBit.Rotate(0, 0, squeeze * triggerRot, Space.Self);
 
     }
