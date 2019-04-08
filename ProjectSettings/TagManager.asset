@@ -13,6 +13,8 @@ TagManager:
   - Shelf
   - Drill
   - AR Book
+  - LeftHand
+  - RightHand
   layers:
   - Default
   - TransparentFX

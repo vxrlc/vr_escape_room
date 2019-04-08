@@ -42,6 +42,10 @@ namespace Valve.VR.InteractionSystem
         [Tooltip("Specify whether you want to snap to the hand's object attachment point, or just the raw hand")]
         public bool useHandObjectAttachmentPoint = true;
 
+        //check if you want to use both hands to interact
+        [Tooltip("Specify whether the interaction requires both hands to activate")]
+        public bool useTwoHands = false;
+
         public bool attachEaseIn = false;
         [HideInInspector]
         public AnimationCurve snapAttachEaseInCurve = AnimationCurve.EaseInOut(0.0f, 0.0f, 1.0f, 1.0f);
