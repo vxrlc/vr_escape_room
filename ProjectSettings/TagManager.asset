@@ -12,6 +12,8 @@ TagManager:
   - Green
   - Shelf
   - Drill
+  - LeftHand
+  - RightHand
   layers:
   - Default
   - TransparentFX
