@@ -12,6 +12,7 @@ TagManager:
   - Green
   - Shelf
   - Drill
+  - AR Book
   layers:
   - Default
   - TransparentFX
