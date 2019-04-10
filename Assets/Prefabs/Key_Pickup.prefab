@@ -81,6 +81,7 @@ MonoBehaviour:
   handAnimationOnPickup: 0
   setRangeOfMotionOnPickup: -1
   useHandObjectAttachmentPoint: 1
+  useTwoHands: 0
   attachEaseIn: 0
   snapAttachEaseInCurve:
     serializedVersion: 2
@@ -141,6 +142,50 @@ MonoBehaviour:
   previewPoseSelection: 0
   blendingBehaviours: []
   scale: 1
+--- !u!114 &232770038096521042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367108735823320739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f32883eed859804dbb0c5fedac91496, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axisOfRotation: 0
+  childCollider: {fileID: 9112137171923126225}
+  linearMapping: {fileID: 0}
+  hoverLock: 0
+  limited: 0
+  frozenDistanceMinMaxThreshold: {x: 0.1, y: 0.2}
+  onFrozenDistanceThreshold:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  minAngle: -45
+  freezeOnMin: 0
+  onMinAngle:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  maxAngle: 45
+  freezeOnMax: 0
+  onMaxAngle:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  forceStart: 0
+  startAngle: 0
+  rotateGameObject: 1
+  debugPath: 0
+  dbgPathLimit: 50
+  debugText: {fileID: 0}
+  outAngle: 0
 --- !u!1001 &5708449393145605999
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -148,16 +193,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 9211230157417103970, guid: fa26b70832cbf5b4d9dfacd02ddf687c,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.008089051
-      objectReference: {fileID: 0}
-    - target: {fileID: 9211230157417103970, guid: fa26b70832cbf5b4d9dfacd02ddf687c,
-        type: 3}
-      propertyPath: m_Center.y
-      value: 0.00020245463
-      objectReference: {fileID: 0}
     - target: {fileID: 5341347262982126028, guid: fa26b70832cbf5b4d9dfacd02ddf687c,
         type: 3}
       propertyPath: m_Name
@@ -218,11 +253,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9211230157417103970, guid: fa26b70832cbf5b4d9dfacd02ddf687c,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.008089051
+      objectReference: {fileID: 0}
+    - target: {fileID: 9211230157417103970, guid: fa26b70832cbf5b4d9dfacd02ddf687c,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.00020245463
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa26b70832cbf5b4d9dfacd02ddf687c, type: 3}
 --- !u!1 &367108735823320739 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5341347262982126028, guid: fa26b70832cbf5b4d9dfacd02ddf687c,
+    type: 3}
+  m_PrefabInstance: {fileID: 5708449393145605999}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &9112137171923126225 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 3552403325135661246, guid: fa26b70832cbf5b4d9dfacd02ddf687c,
     type: 3}
   m_PrefabInstance: {fileID: 5708449393145605999}
   m_PrefabAsset: {fileID: 0}

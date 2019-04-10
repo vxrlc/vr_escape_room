@@ -11,6 +11,9 @@ public class lockmanager : MonoBehaviour
     public BoxCollider trigger;
 
     private Interactable interactable;
+    private Throwable throwable;
+    private Rigidbody rb;
+   
 
     // Start is called before the first frame update
     void Start()
@@ -19,19 +22,18 @@ public class lockmanager : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.name);
-        if (transform.parent.tag == other.tag)
+        if (transform.parent.tag == other.transform.parent.tag)
         {
-            interactable = other.transform.GetComponent<Interactable>();
-            interactable.enabled = false;
-            if (interactable.attachedToHand)
-            {
-                SteamVR_Input_Sources hand = interactable.attachedToHand.handType;
-               // hand
-            }
-           // other.gameObject.SetActive(false);
-            key.SetActive(true);
-            trigger.enabled = false;
+          //  interactable = other.transform.GetComponent<Interactable>();
+            rb = other.transform.parent.GetComponent<Rigidbody>();
+            //Destroy(other.transform.parent.GetComponent<Throwable>());
+
+           // if (interactable.attachedToHand)
+          //  {
+                rb.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
+           // }
+           // key.SetActive(true);
+            //trigger.enabled = false;
         }
     }
    public void Unlock()

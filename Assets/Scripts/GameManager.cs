@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public int seconds;
     public GameObject vent;
     public bool isHolding = false;
+    public int ARCardScore = 0;
     private int index;
 
     public float drillRotation;

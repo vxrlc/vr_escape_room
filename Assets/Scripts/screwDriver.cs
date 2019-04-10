@@ -11,6 +11,8 @@ public class screwDriver : MonoBehaviour
     public Transform drillBit;
     public float squeeze = 0;
     public SteamVR_Action_Single actionSqueeze = SteamVR_Input.GetAction<SteamVR_Action_Single>("default", "Squeeze");
+    public SteamVR_Action_Vibration haptics;
+
 
     private Quaternion trigSRot;
     private Interactable interactable;
@@ -35,21 +37,30 @@ public class screwDriver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+       
         squeeze = 0;
         if (interactable.attachedToHand)
         {
-            SteamVR_Input_Sources hand = interactable.attachedToHand.handType;
+           SteamVR_Input_Sources hand = interactable.attachedToHand.handType;
 
             squeeze = actionSqueeze.GetAxis(hand);
-           
+            Vibrate(10, 200, 100, SteamVR_Input_Sources.RightHand);
+
+
         }
         modelTrigger.localRotation = trigSRot;
         modelTrigger.Rotate(squeeze * triggerRot, 0, 0, Space.Self);
         gameManager.drillRotation = squeeze * triggerRot;
         gameManager.drillTriggerSqueeze = squeeze;
         drillBit.Rotate(0, 0, squeeze * triggerRot, Space.Self);
+       
 
+    }
+    private void Vibrate(float duration, float frequency, float amplitude, SteamVR_Input_Sources source)
+    {
+ 
+        haptics.Execute(0, duration, frequency, amplitude, source);
+        Debug.Log(source);
     }
    
 }

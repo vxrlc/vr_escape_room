@@ -7,9 +7,12 @@ using Valve.VR.InteractionSystem;
 public class smartphone : MonoBehaviour
 {
     public Camera smartphoneCamera;
-    public GameObject screen;
+    public GameObject cameraScreen;
+    public GameObject lockScreen;
     private Interactable interactable;
     public GameObject key;
+    public GameObject ARMaze;
+    public Collider MazeCollider;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,21 +24,28 @@ public class smartphone : MonoBehaviour
     {
         if (interactable.attachedToHand)
         {
-            screen.SetActive(true);
+           
+            cameraScreen.SetActive(true);
+            lockScreen.SetActive(true);
             RaycastHit hit;
             Ray ray = smartphoneCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
             if (Physics.Raycast(ray, out hit))
             {
-               
+                //Debug.Log(hit.collider.name);
                 if (hit.collider.name == "AR Book")
                 {
                     key.SetActive(true);
+                } else if (hit.collider.name == "AR Postcard")
+                {
+                    ARMaze.SetActive(true);
+                    MazeCollider.enabled = false;
                 }
                 
             }
         } else
         {
-            screen.SetActive(false);
+            cameraScreen.SetActive(false);
+            lockScreen.SetActive(true);
         }
         
     }

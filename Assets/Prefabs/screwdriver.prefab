@@ -442,6 +442,9 @@ MonoBehaviour:
   actionSqueeze:
     actionPath: /actions/default/in/Squeeze
     needsReinit: 0
+  haptics:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
   rotation: 0
   pickUpCollider: {fileID: 183831163100951169}
 --- !u!114 &1297001412730238825
@@ -531,6 +534,7 @@ MonoBehaviour:
   handAnimationOnPickup: 0
   setRangeOfMotionOnPickup: -1
   useHandObjectAttachmentPoint: 1
+  useTwoHands: 0
   attachEaseIn: 0
   snapAttachEaseInCurve:
     serializedVersion: 2
