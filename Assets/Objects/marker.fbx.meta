@@ -1,28 +1,15 @@
 fileFormatVersion: 2
-guid: 38561da13dac8a34c9485e6fb03d6c37
+guid: 733974e91ed10dd40a19ccba1fe1fdac
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: body
-    100002: //RootNode
-    100004: lock 1
-    400000: body
-    400002: //RootNode
-    400004: lock 1
+    100000: //RootNode
+    400000: //RootNode
     2100000: lambert1
-    2300000: body
-    2300002: lock 1
-    3300000: body
-    3300002: lock 1
-    4300000: lock
-    4300002: body
-    2186277476908879412: ImportLogs
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: lambert1
-    second: {fileID: 2100000, guid: 62ef622dede60094f8fba809f7bab959, type: 2}
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: marker
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0

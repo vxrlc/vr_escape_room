@@ -6,6 +6,7 @@ public class unscrew : MonoBehaviour
 {
     private bool screwdriver = false;
     public Rigidbody rigidBody;
+    public Collider collider;
     public GameManager gameManager;
     private bool screwOut = false;
     private void OnTriggerEnter(Collider other)
@@ -36,6 +37,7 @@ public class unscrew : MonoBehaviour
         {
             
             rigidBody.useGravity = true;
+            collider.enabled = true;
             gameManager.screwsUnscrewed = gameManager.screwsUnscrewed + 1;
             screwOut = true;
         }

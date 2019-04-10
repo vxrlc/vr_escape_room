@@ -22,6 +22,7 @@ public class VRUIInput : MonoBehaviour
         laserPointer.PointerOut += HandlePointerOut;
         laserPointer.PointerClick -= HandlePointerClick;
         laserPointer.PointerClick += HandlePointerClick;
+       
     }
     private void Update()
     {

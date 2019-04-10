@@ -36,13 +36,7 @@ public class leaderBoard : MonoBehaviour
       
         collectedStats = new List<PlayerInfo>();
        LoadLeaderBoard();
-        if (gameManager.gamePaused)
-        {
-            this.enabled = true;
-        } else
-        {
-            this.enabled = false;
-        }
+       
     }
     
     public void SubmitButton()

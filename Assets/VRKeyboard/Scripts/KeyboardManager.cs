@@ -41,8 +41,23 @@ namespace VRKeyboard.Utils {
         #endregion
 
         #region Monobehaviour Callbacks
+        private void OnEnable()
+        {
+            if (gameManager.winGame)
+            {
+                winText.SetActive(true);
+                comboText.SetActive(false);
+
+            }
+            else
+            {
+                winText.SetActive(false);
+                comboText.SetActive(true);
+            }
+        }
         private void Awake() {
             
+
             for (int i = 0; i < characters.childCount; i++) {
                 GameObject key = characters.GetChild(i).gameObject;
                 Text _text = key.GetComponentInChildren<Text>();
@@ -70,19 +85,7 @@ namespace VRKeyboard.Utils {
         public void Clear() {
             Input = "";
         }
-        public void messageSwap()
-        {
-            if (gameManager.winGame)
-            {
-                winText.SetActive(true);
-                comboText.SetActive(false);
-
-            } else
-            {
-                winText.SetActive(false);
-                comboText.SetActive(true);
-            }
-        }
+     
         public void Enter()
         {
           if (gameManager.winGame)

@@ -26,7 +26,7 @@ public class screwDriver : MonoBehaviour
         interactable = GetComponent<Interactable>();
         trigSRot = modelTrigger.localRotation;
         gameManager = FindObjectOfType<GameManager>() as GameManager;
-
+      
     }
     // function to indicate the drill is being held, used to prevent laser pointer from being used
     public void toggleHandle()

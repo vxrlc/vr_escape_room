@@ -9,7 +9,6 @@ public class GameManager : MonoBehaviour
     public float startTime;
     public Text countDownText;
     public string formattedTime;
-    public bool gamePaused = false;
     public bool winGame = false;
     public int hours;
     public int minutes;
@@ -18,6 +17,11 @@ public class GameManager : MonoBehaviour
     public bool isHolding = false;
     public int ARCardScore = 0;
     private int index;
+    public int locksUnlocked = 0;
+    public int locksToWin = 3;
+
+    public GameObject keyboard;
+    public GameObject leaderboard;
 
     public float drillRotation;
     public float drillTriggerSqueeze;
@@ -52,8 +56,19 @@ public class GameManager : MonoBehaviour
             isHolding = true;
         }
     }
+    private void WinGame()
+    {
+        keyboard.SetActive(true);
+        leaderboard.SetActive(true);
+    }
     private void Update()
     {
+        if (locksToWin == locksUnlocked)
+        {
+            winGame = true;
+            WinGame();
+        }
+        if (!winGame && timer >= 0f)
         // countdown timer logic
         timer -= Time.deltaTime;
 
