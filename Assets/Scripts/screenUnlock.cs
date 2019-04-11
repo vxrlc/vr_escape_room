@@ -6,15 +6,15 @@ public class screenUnlock : MonoBehaviour
 {
 
     public string computerPassword = "virtual";
-    public string enteredPassword;
+    //public string enteredPassword; 
 
     public GameObject lockedScreen;
     public GameObject comboScreen;
     private void Start()
     {
-        enterPassword();
+        //enterPassword();
     }
-    public void enterPassword()
+    public void enterPassword(string enteredPassword)
     {
         if (computerPassword == enteredPassword)
         {

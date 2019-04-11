@@ -24,7 +24,7 @@ namespace Valve.VR.InteractionSystem
         public bool hideSkeletonOnAttach = false;
 
         [Tooltip("Hide the controller part of the hand on attachment and show on detach")]
-        public bool hideControllerOnAttach = false;
+        public bool     hideControllerOnAttach = false;
 
         [Tooltip("The integer in the animator to trigger on pickup. 0 for none")]
         public int handAnimationOnPickup = 0;
@@ -41,6 +41,10 @@ namespace Valve.VR.InteractionSystem
 
         [Tooltip("Specify whether you want to snap to the hand's object attachment point, or just the raw hand")]
         public bool useHandObjectAttachmentPoint = true;
+
+        //check if you want to use both hands to interact
+        [Tooltip("Specify whether the interaction requires both hands to activate")]
+        public bool useTwoHands = false;
 
         public bool attachEaseIn = false;
         [HideInInspector]
@@ -101,6 +105,10 @@ namespace Valve.VR.InteractionSystem
                     useHandObjectAttachmentPoint = false;
                 }
             }
+        }
+        public void DetachFromHand() //Added method in Interactable.cs
+        {
+            OnDetachedFromHand(attachedToHand);
         }
 
         protected virtual bool ShouldIgnoreHighlight(Component component)

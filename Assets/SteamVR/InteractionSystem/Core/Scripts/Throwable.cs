@@ -212,6 +212,7 @@ namespace Valve.VR.InteractionSystem
             if (hand.IsGrabEnding(this.gameObject))
             {
                 hand.DetachObject(gameObject, restoreOriginalParent);
+               // Destroy(gameObject);
 
                 // Uncomment to detach ourselves late in the frame.
                 // This is so that any vehicles the player is attached to

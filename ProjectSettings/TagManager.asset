@@ -3,7 +3,19 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - VRGazeInteractable
+  - projectile
+  - FxTemporaire
+  - Red
+  - Blue
+  - Green
+  - Shelf
+  - Drill
+  - AR Book
+  - LeftHand
+  - RightHand
+  - Collectable
   layers:
   - Default
   - TransparentFX
@@ -14,8 +26,8 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
+  - AR Postcard
+  - SmartPhone Ignore
   - 
   - 
   - 
