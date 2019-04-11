@@ -1000,6 +1000,7 @@ MonoBehaviour:
   handAnimationOnPickup: 0
   setRangeOfMotionOnPickup: -1
   useHandObjectAttachmentPoint: 1
+  useTwoHands: 0
   attachEaseIn: 0
   snapAttachEaseInCurve:
     serializedVersion: 2
@@ -1421,6 +1422,7 @@ MonoBehaviour:
   handAnimationOnPickup: 0
   setRangeOfMotionOnPickup: -1
   useHandObjectAttachmentPoint: 1
+  useTwoHands: 0
   attachEaseIn: 0
   snapAttachEaseInCurve:
     serializedVersion: 2

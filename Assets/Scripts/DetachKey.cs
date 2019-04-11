@@ -11,9 +11,11 @@ public class DetachKey : MonoBehaviour
     {
        
         transform.parent = null;
+        rigidBody.isKinematic = false;
     }
     public void DropKey()
     {
         rigidBody.useGravity = true;
+     
     }
 }
