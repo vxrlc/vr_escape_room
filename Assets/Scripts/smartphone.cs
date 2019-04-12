@@ -13,12 +13,13 @@ public class smartphone : MonoBehaviour
     public GameObject key;
     public GameObject ARMaze;
     public Collider MazeCollider;
+    private Interactable ARInteractable;
     // Start is called before the first frame update
     void Start()
     {
         interactable = GetComponent<Interactable>();
     }
-
+  
     // Update is called once per frame
     void Update()
     {
@@ -37,8 +38,12 @@ public class smartphone : MonoBehaviour
                     key.SetActive(true);
                 } else if (hit.collider.name == "AR Postcard")
                 {
-                    ARMaze.SetActive(true);
-                    MazeCollider.enabled = false;
+                    ARInteractable = hit.collider.transform.parent.GetComponent<Interactable>();
+                    if (ARInteractable.attachedToHand)
+                    {
+                        ARMaze.SetActive(true);
+                        //MazeCollider.enabled = false;
+                    }
                 }
                 
             }
@@ -46,6 +51,8 @@ public class smartphone : MonoBehaviour
         {
             cameraScreen.SetActive(false);
             lockScreen.SetActive(true);
+            ARMaze.SetActive(false);
+            MazeCollider.enabled = true;
         }
         
     }

@@ -21,7 +21,7 @@ public class hitTest : MonoBehaviour
             //vbBtnObject.GetComponent<VirtualButtonBehaviour>().enabled = true;
             //countdown.GetComponent<countdown>().gameOver = true;
             gameManager.ARCardScore++;
-            scoreText.text = "SCORE: " + gameManager.ARCardScore.ToString();
+            scoreText.text = "Score: " + gameManager.ARCardScore.ToString();
             fireworks.Play();
             fireworksSound.Play();
             //InvokeRepeating("Vibrate", 0f, 0.5f);

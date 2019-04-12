@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class countdown : MonoBehaviour
 {
     public Text timerText;
-    public float timer = 30;
+    public float timer = 45;
     public GameObject RestartButton;
     public GameObject vbBtnObject;
     public bool gameOver = false;
@@ -24,7 +24,7 @@ public class countdown : MonoBehaviour
         if (timer > 0 && !gameOver)
         {
             timer -= Time.deltaTime;
-            //timerText.text = "Time: " + timer.ToString("F0");
+            timerText.text = "Time: " + timer.ToString("F0");
         }
         else if (timer < 0)
         {
