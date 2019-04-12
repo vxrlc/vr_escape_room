@@ -46,6 +46,10 @@ namespace Valve.VR.InteractionSystem
         [Tooltip("Specify whether the interaction requires both hands to activate")]
         public bool useTwoHands = false;
 
+        // added to have child of interactable not be a part of interactable until moving
+        private Transform childObjectOrigin;
+        public GameObject childToAttach;
+
         public bool attachEaseIn = false;
         [HideInInspector]
         public AnimationCurve snapAttachEaseInCurve = AnimationCurve.EaseInOut(0.0f, 0.0f, 1.0f, 1.0f);
@@ -92,6 +96,10 @@ namespace Valve.VR.InteractionSystem
 
         protected virtual void Start()
         {
+            if (childToAttach != null)
+            {
+                childObjectOrigin = childToAttach.transform.parent;
+            }
             highlightMat = (Material)Resources.Load("SteamVR_HoverHighlight", typeof(Material));
 
             if (highlightMat == null)
@@ -286,14 +294,20 @@ namespace Valve.VR.InteractionSystem
 
             if (onAttachedToHand != null)
             {
+
                 onAttachedToHand.Invoke(hand);
             }
 
             if (skeletonPoser != null && hand.skeleton != null)
             {
                 hand.skeleton.BlendToPoser(skeletonPoser, blendToPoseTime);
+                // Attach child object to interactable
+                if (childToAttach != null)
+                {
+                    childToAttach.transform.parent = gameObject.transform;
+                }
             }
-
+          
             attachedToHand = hand;
         }
 
@@ -316,7 +330,11 @@ namespace Valve.VR.InteractionSystem
 
 
             if (skeletonPoser != null)
-            {
+            {   // detach child object from interactable
+                if (childToAttach != null)
+                {
+                    childToAttach.transform.parent = childObjectOrigin;
+                }
                 if (hand.skeleton != null)
                     hand.skeleton.BlendToSkeleton(releasePoseBlendTime);
             }

@@ -24,7 +24,7 @@ public class countdown : MonoBehaviour
         if (timer > 0 && !gameOver)
         {
             timer -= Time.deltaTime;
-            timerText.text = "Time: " + timer.ToString("F0");
+            //timerText.text = "Time: " + timer.ToString("F0");
         }
         else if (timer < 0)
         {
