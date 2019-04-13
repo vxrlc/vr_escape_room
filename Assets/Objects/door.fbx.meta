@@ -1,30 +1,100 @@
 fileFormatVersion: 2
-guid: 46e3a20502ad5834abb4f6635e02b4af
+guid: f4252ddd74b2b5249a9a5509fc05fd9d
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: body
-    100002: lock 1
-    100004: //RootNode
-    100006: mechanism
-    400000: body
-    400002: lock 1
-    400004: //RootNode
-    400006: mechanism
+    100000: //RootNode
+    100002: insideHandle
+    100004: outsideHandle
+    100006: pCube31
+    100008: pCube32
+    100010: pCube33
+    100012: pCube34
+    100014: pCube35
+    100016: pCylinder49
+    100018: pCylinder49 1
+    100020: pCylinder50
+    100022: pCylinder50 1
+    100024: pCylinder51
+    100026: pCylinder52
+    100028: pCylinder53
+    100030: pCylinder54
+    100032: pCylinder55
+    100034: pCylinder56
+    100036: pCylinder57
+    100038: pCylinder58
+    400000: //RootNode
+    400002: insideHandle
+    400004: outsideHandle
+    400006: pCube31
+    400008: pCube32
+    400010: pCube33
+    400012: pCube34
+    400014: pCube35
+    400016: pCylinder49
+    400018: pCylinder49 1
+    400020: pCylinder50
+    400022: pCylinder50 1
+    400024: pCylinder51
+    400026: pCylinder52
+    400028: pCylinder53
+    400030: pCylinder54
+    400032: pCylinder55
+    400034: pCylinder56
+    400036: pCylinder57
+    400038: pCylinder58
     2100000: lambert1
-    2300000: body
-    2300002: lock 1
-    2300004: mechanism
-    3300000: body
-    3300002: lock 1
-    3300004: mechanism
-    4300000: lock
-    4300002: body
-    4300004: mechanism
-    6400000: body
-    6400002: lock 1
-    6400004: mechanism
-    2186277476908879412: ImportLogs
+    2300000: pCube31
+    2300002: pCube32
+    2300004: pCube33
+    2300006: pCube34
+    2300008: pCube35
+    2300010: pCylinder49
+    2300012: pCylinder49 1
+    2300014: pCylinder50
+    2300016: pCylinder50 1
+    2300018: pCylinder51
+    2300020: pCylinder52
+    2300022: pCylinder53
+    2300024: pCylinder54
+    2300026: pCylinder55
+    2300028: pCylinder56
+    2300030: pCylinder57
+    2300032: pCylinder58
+    3300000: pCube31
+    3300002: pCube32
+    3300004: pCube33
+    3300006: pCube34
+    3300008: pCube35
+    3300010: pCylinder49
+    3300012: pCylinder49 1
+    3300014: pCylinder50
+    3300016: pCylinder50 1
+    3300018: pCylinder51
+    3300020: pCylinder52
+    3300022: pCylinder53
+    3300024: pCylinder54
+    3300026: pCylinder55
+    3300028: pCylinder56
+    3300030: pCylinder57
+    3300032: pCylinder58
+    4300000: pCube33
+    4300002: pCube32
+    4300004: pCube31
+    4300006: pCylinder50
+    4300008: pCylinder49
+    4300010: pCylinder51
+    4300012: pCylinder52
+    4300014: pCylinder53
+    4300016: pCylinder54
+    4300018: pCylinder50
+    4300020: pCylinder49
+    4300022: pCube35
+    4300024: pCube34
+    4300026: pCylinder58
+    4300028: pCylinder57
+    4300030: pCylinder56
+    4300032: pCylinder55
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -58,7 +128,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1

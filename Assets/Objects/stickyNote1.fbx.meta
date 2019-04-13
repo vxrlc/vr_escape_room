@@ -1,30 +1,14 @@
 fileFormatVersion: 2
-guid: 46e3a20502ad5834abb4f6635e02b4af
+guid: b307deb65fc6f934a9ea758e84715d48
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: body
-    100002: lock 1
-    100004: //RootNode
-    100006: mechanism
-    400000: body
-    400002: lock 1
-    400004: //RootNode
-    400006: mechanism
+    100000: //RootNode
+    400000: //RootNode
     2100000: lambert1
-    2300000: body
-    2300002: lock 1
-    2300004: mechanism
-    3300000: body
-    3300002: lock 1
-    3300004: mechanism
-    4300000: lock
-    4300002: body
-    4300004: mechanism
-    6400000: body
-    6400002: lock 1
-    6400004: mechanism
-    2186277476908879412: ImportLogs
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: stickyNote1
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -58,7 +42,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
