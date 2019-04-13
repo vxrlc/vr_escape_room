@@ -465,7 +465,12 @@ ModelImporter:
     4300168: celingMountBaseSupport
     4300170: celingMountBaseBase
     4300172: celingMountTube
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 37d20d6dfdc3ca4478db92e9b6459c8c, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

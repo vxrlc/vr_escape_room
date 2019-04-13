@@ -9,7 +9,13 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: mug
-  externalObjects: {}
+    6400000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: e9ef9f7cb2fbd264b8d5e6b518d5dbe7, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -42,7 +48,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
@@ -52,7 +58,7 @@ ModelImporter:
     generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
-    keepQuads: 0
+    keepQuads: 1
     weldVertices: 1
     preserveHierarchy: 0
     indexFormat: 0

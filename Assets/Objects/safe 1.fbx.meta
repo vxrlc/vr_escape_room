@@ -152,7 +152,12 @@ ModelImporter:
     4300050: pCylinder47
     4300052: pCylinder48
     4300054: safeBox1
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: a0923d13a9397bb4299b7b86002a324b, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

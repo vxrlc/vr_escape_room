@@ -54,6 +54,11 @@ ModelImporter:
     400046: white_corkBoard:boardEdge
     400048: white_corkBoard:boardFace
     2100000: lambert1
+    2100002: Body
+    2100004: Metal.001
+    2100006: Label.001
+    2100008: Metal
+    2100010: Label
     2300000: base
     2300002: boardBack
     2300004: boardEdge

@@ -1,0 +1,228 @@
+fileFormatVersion: 2
+guid: cb8fabe3d77cc0a4cb33affb376866c3
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: base
+    100002: boardBack
+    100004: boardEdge
+    100006: boardFace
+    100008: bottomDrawer
+    100010: bottomDrawerBack
+    100012: bottomDrawerBottom
+    100014: bottomDrawerFront
+    100016: bottomDrawerHandle
+    100018: bottomDrawerSideL
+    100020: bottomDrawerSideR
+    100022: bottomTag
+    100024: Drawers
+    100026: //RootNode
+    100028: topDrawer
+    100030: topDrawerBack
+    100032: topDrawerBottom
+    100034: topDrawerFront
+    100036: topDrawerHandle
+    100038: topDrawerSideL
+    100040: topDrawerSideR
+    100042: topTag
+    100044: white_corkBoard:boardBack
+    100046: white_corkBoard:boardEdge
+    100048: white_corkBoard:boardFace
+    400000: base
+    400002: boardBack
+    400004: boardEdge
+    400006: boardFace
+    400008: bottomDrawer
+    400010: bottomDrawerBack
+    400012: bottomDrawerBottom
+    400014: bottomDrawerFront
+    400016: bottomDrawerHandle
+    400018: bottomDrawerSideL
+    400020: bottomDrawerSideR
+    400022: bottomTag
+    400024: Drawers
+    400026: //RootNode
+    400028: topDrawer
+    400030: topDrawerBack
+    400032: topDrawerBottom
+    400034: topDrawerFront
+    400036: topDrawerHandle
+    400038: topDrawerSideL
+    400040: topDrawerSideR
+    400042: topTag
+    400044: white_corkBoard:boardBack
+    400046: white_corkBoard:boardEdge
+    400048: white_corkBoard:boardFace
+    2100000: Body
+    2100002: Metal.001
+    2100004: Label.001
+    2100006: Metal
+    2100008: Label
+    2300000: base
+    2300002: boardBack
+    2300004: boardEdge
+    2300006: boardFace
+    2300008: bottomDrawerBack
+    2300010: bottomDrawerBottom
+    2300012: bottomDrawerFront
+    2300014: bottomDrawerHandle
+    2300016: bottomDrawerSideL
+    2300018: bottomDrawerSideR
+    2300020: topDrawerBack
+    2300022: topDrawerBottom
+    2300024: topDrawerFront
+    2300026: topDrawerHandle
+    2300028: topDrawerSideL
+    2300030: topDrawerSideR
+    2300032: white_corkBoard:boardBack
+    2300034: white_corkBoard:boardEdge
+    2300036: white_corkBoard:boardFace
+    3300000: base
+    3300002: boardBack
+    3300004: boardEdge
+    3300006: boardFace
+    3300008: bottomDrawerBack
+    3300010: bottomDrawerBottom
+    3300012: bottomDrawerFront
+    3300014: bottomDrawerHandle
+    3300016: bottomDrawerSideL
+    3300018: bottomDrawerSideR
+    3300020: topDrawerBack
+    3300022: topDrawerBottom
+    3300024: topDrawerFront
+    3300026: topDrawerHandle
+    3300028: topDrawerSideL
+    3300030: topDrawerSideR
+    3300032: white_corkBoard:boardBack
+    3300034: white_corkBoard:boardEdge
+    3300036: white_corkBoard:boardFace
+    4300000: base
+    4300002: topDrawerFront
+    4300004: topDrawerBottom
+    4300006: topDrawerSideL
+    4300008: topDrawerSideR
+    4300010: topDrawerBack
+    4300012: topDrawerHandle
+    4300014: white_corkBoard:boardEdge
+    4300016: white_corkBoard:boardFace
+    4300018: white_corkBoard:boardBack
+    4300020: bottomDrawerFront
+    4300022: bottomDrawerBottom
+    4300024: bottomDrawerSideR
+    4300026: bottomDrawerSideL
+    4300028: bottomDrawerBack
+    4300030: bottomDrawerHandle
+    4300032: boardEdge
+    4300034: boardFace
+    4300036: boardBack
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Body
+    second: {fileID: 2100000, guid: 301919fd04732184caea0d90025479fe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Label
+    second: {fileID: 2100000, guid: 62ef622dede60094f8fba809f7bab959, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Label.001
+    second: {fileID: 2100000, guid: 62ef622dede60094f8fba809f7bab959, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal
+    second: {fileID: 2100000, guid: a0923d13a9397bb4299b7b86002a324b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal.001
+    second: {fileID: 2100000, guid: a0923d13a9397bb4299b7b86002a324b, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
