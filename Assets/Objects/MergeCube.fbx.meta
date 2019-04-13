@@ -1,39 +1,23 @@
 fileFormatVersion: 2
-guid: 09ed819803dce7e4a95c50b37df79b70
+guid: 215ef4207a1b4cd49b44fee13d66514b
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: boardBack
-    100002: boardEdge
-    100004: boardFace
-    100006: boardWhole
-    100008: pCube1
-    100010: pCube2
-    100012: //RootNode
-    400000: boardBack
-    400002: boardEdge
-    400004: boardFace
-    400006: boardWhole
-    400008: pCube1
-    400010: pCube2
-    400012: //RootNode
+    100000: //RootNode
+    100002: mergeCubeBase
+    400000: //RootNode
+    400002: mergeCubeBase
     2100000: lambert1
-    2300000: boardBack
-    2300002: boardEdge
-    2300004: boardFace
-    2300006: pCube1
-    2300008: pCube2
-    3300000: boardBack
-    3300002: boardEdge
-    3300004: boardFace
-    3300006: pCube1
-    3300008: pCube2
-    4300000: boardEdge
-    4300002: boardFace
-    4300004: boardBack
-    4300006: pCube1
-    4300008: pCube2
-  externalObjects: {}
+    2300000: mergeCubeBase
+    3300000: mergeCubeBase
+    4300000: mergeCubeBase
+    6400000: mergeCubeBase
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: aae07507ab4a41244b8f0b25bb35653c, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -64,9 +48,9 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 100
+    globalScale: 3
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
