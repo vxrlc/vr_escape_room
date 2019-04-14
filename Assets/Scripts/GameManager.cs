@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         startTime = timer;
-        spawnDrill();
+       // spawnDrill();
 
     }
     void spawnDrill()

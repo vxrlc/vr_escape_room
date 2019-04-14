@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 3296464903199876223}
   - component: {fileID: 8332661854231362110}
   - component: {fileID: 5962455239932092647}
+  - component: {fileID: 9205284396636829989}
   m_Layer: 0
   m_Name: poster
   m_TagString: Untagged
@@ -206,6 +207,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &9205284396636829989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7210240427232616366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c12060c75366ddb4cbf5eaa874a972cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6222333366403974371
 PrefabInstance:
   m_ObjectHideFlags: 0
