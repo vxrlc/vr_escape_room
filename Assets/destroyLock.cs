@@ -4,34 +4,28 @@ using UnityEngine;
 using Valve.VR;
 using Valve.VR.InteractionSystem;
 
-public class keyManager : MonoBehaviour
+public class destroyLock : MonoBehaviour
 {
     Hand playerHand;
-    public bool inLock = false;
-    public bool unLocked = false;
-    private Rigidbody rb;
-
+    public bool unlocked = false;
     protected virtual void OnAttachedToHand(Hand hand)
     {
         playerHand = hand;
 
     }
-   
     private void HandAttachedUpdate()
     {
-        if (inLock && unLocked)
+        if (unlocked)
         {
-            Invoke("DestroyKey", 1f);
+            Invoke("DestroyLock", 1F);
         }
+        
+       
     }
-    private void DestroyKey()
+    private void DestroyLock()
     {
+
         playerHand.DetachObject(this.gameObject);
         Destroy(this.gameObject);
     }
-    public void UnFreeze()
-    {
-        rb = gameObject.GetComponent<Rigidbody>();
-        rb.constraints = RigidbodyConstraints.None;
-    }
- }
+}

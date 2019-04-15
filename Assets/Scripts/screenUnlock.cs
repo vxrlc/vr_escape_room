@@ -10,16 +10,24 @@ public class screenUnlock : MonoBehaviour
 
     public GameObject lockedScreen;
     public GameObject comboScreen;
+    public bool correctPassword;
     private void Start()
     {
         //enterPassword();
     }
-    public void enterPassword(string enteredPassword)
+    public bool enterPassword(string enteredPassword)
     {
         if (computerPassword == enteredPassword)
         {
             lockedScreen.SetActive(false);
             comboScreen.SetActive(true);
+            correctPassword = true; 
+            
+        } else
+        {
+            correctPassword = false;
         }
+        return correctPassword;
+
     }
 }

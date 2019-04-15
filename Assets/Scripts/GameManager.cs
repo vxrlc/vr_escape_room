@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     private int index;
     public int locksUnlocked = 0;
     public int locksToWin = 3;
+    public GameObject Teleport;
 
     public GameObject keyboard;
     public GameObject leaderboard;
@@ -60,6 +61,13 @@ public class GameManager : MonoBehaviour
     {
         keyboard.SetActive(true);
         leaderboard.SetActive(true);
+        Teleport.SetActive(false);
+    }
+    private void LoseGame()
+    {
+        keyboard.SetActive(true);
+        leaderboard.SetActive(true);
+        Teleport.SetActive(false);
     }
     private void Update()
     {
@@ -69,9 +77,13 @@ public class GameManager : MonoBehaviour
             WinGame();
         }
         if (!winGame && timer >= 0f)
-        // countdown timer logic
-        timer -= Time.deltaTime;
-
+        {
+            // countdown timer logic
+            timer -= Time.deltaTime;
+        } else
+        {
+            LoseGame();
+        }
         hours = Mathf.FloorToInt(timer / 3600F);
         minutes = Mathf.FloorToInt((timer % 3600) / 60);
         seconds = Mathf.FloorToInt(timer % 60);

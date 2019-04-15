@@ -14,7 +14,6 @@ public class ClockAnimator : MonoBehaviour
     private void Update()
     {
         TimeSpan time = DateTime.Now.TimeOfDay;
-        Debug.Log(time.TotalHours);
         hours.localRotation = Quaternion.Euler(0f,  (float)time.TotalHours * hoursToDegress, 0f);
         minutes.localRotation = Quaternion.Euler(0f,  (float)time.TotalMinutes * minutesToDegress, 0f);
         seconds.localRotation = Quaternion.Euler(0f,  (float)time.TotalSeconds * secondsToDegress, 0f);

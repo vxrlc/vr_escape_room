@@ -38,12 +38,17 @@ public class smartphone : MonoBehaviour
                     key.SetActive(true);
                 } else if (hit.collider.name == "AR Postcard")
                 {
-                    ARInteractable = hit.collider.transform.parent.GetComponent<Interactable>();
-                    if (ARInteractable.attachedToHand)
+                    if (hit.collider.transform.parent.GetComponent<Interactable>() != null)
                     {
-                        ARMaze.SetActive(true);
-                        //MazeCollider.enabled = false;
+                        ARInteractable = hit.collider.transform.parent.GetComponent<Interactable>();
+                    
+                        if (ARInteractable.attachedToHand)
+                        {
+                            ARMaze.SetActive(true);
+                            //MazeCollider.enabled = false;
+                        }
                     }
+                    
                 }
                 
             }

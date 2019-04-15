@@ -6,6 +6,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using Valve.VR;
 
 namespace VRKeyboard.Utils {
     public class KeyboardManager : MonoBehaviour {
@@ -16,9 +17,12 @@ namespace VRKeyboard.Utils {
         public int maxInputLength;
         public GameManager gameManager;
         public GameObject winText;
+        public Text passwordText;
         public GameObject comboText;
+        public GameObject loseText;
         public GameObject screen;
         public GameObject leaderBoard;
+            public GameObject endGameButtons;
       
    
         
@@ -43,14 +47,19 @@ namespace VRKeyboard.Utils {
         #region Monobehaviour Callbacks
         private void OnEnable()
         {
-            if (gameManager.winGame)
+            if (gameManager.winGame && gameManager.timer > 0)
             {
                 winText.SetActive(true);
                 comboText.SetActive(false);
 
-            }
+            } else if (gameManager.timer <=0)
+            {
+                comboText.SetActive(false);
+                loseText.SetActive(true);
+                endGameButtons.SetActive(true);            }
             else
             {
+                endGameButtons.SetActive(false);
                 winText.SetActive(false);
                 comboText.SetActive(true);
             }
@@ -81,6 +90,15 @@ namespace VRKeyboard.Utils {
                 return;
             }
         }
+       
+        public void Restart()
+        {
+            SteamVR_LoadLevel.Begin("VrEscapeRoom");
+        }
+        public void QuitGame()
+        {
+            UnityEditor.EditorApplication.isPlaying = false;
+        }
 
         public void Clear() {
             Input = "";
@@ -93,11 +111,21 @@ namespace VRKeyboard.Utils {
                 leaderBoard.GetComponent<leaderBoard>().SubmitButton();
             } else
             {
-                screen.GetComponent<screenUnlock>().enterPassword(inputText.text);
+                if (screen.GetComponent<screenUnlock>().enterPassword(inputText.text))
+                {
+                    passwordText.text = "Correct Password. Computer Unlocked";
+                    Invoke("hideKeyboard", 1f);
+                } else
+                {
+                    passwordText.text = "Inccorrect Password. Please try again.";
+                }
             }
+            
+        }
+        private void hideKeyboard()
+        {
             gameObject.SetActive(false);
         }
-
         public void CapsLock() {
             if (capslockFlag) {
                 foreach (var pair in keysDictionary) {
