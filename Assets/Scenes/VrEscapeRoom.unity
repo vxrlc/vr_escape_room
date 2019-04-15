@@ -336,6 +336,11 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.y
       value: -1.744
       objectReference: {fileID: 0}
+    - target: {fileID: 1962459475908873796, guid: a3a9898d217b03c48844d1071b0fcb0c,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: -8.875537
+      objectReference: {fileID: 0}
     - target: {fileID: 8517849085230424467, guid: a3a9898d217b03c48844d1071b0fcb0c,
         type: 3}
       propertyPath: m_Name
@@ -3034,6 +3039,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1345473140}
     m_Modifications:
+    - target: {fileID: 1962459475908873796, guid: a3a9898d217b03c48844d1071b0fcb0c,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 3.5714211
+      objectReference: {fileID: 0}
+    - target: {fileID: 1962459475908873796, guid: a3a9898d217b03c48844d1071b0fcb0c,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -1.7489
+      objectReference: {fileID: 0}
+    - target: {fileID: 1962459475908873796, guid: a3a9898d217b03c48844d1071b0fcb0c,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: -8.875537
+      objectReference: {fileID: 0}
     - target: {fileID: 8517849085230424467, guid: a3a9898d217b03c48844d1071b0fcb0c,
         type: 3}
       propertyPath: m_Name
@@ -4278,6 +4298,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ConnectedAnchor.y
       value: -1.744
+      objectReference: {fileID: 0}
+    - target: {fileID: 1962459475908873796, guid: a3a9898d217b03c48844d1071b0fcb0c,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: -8.875537
       objectReference: {fileID: 0}
     - target: {fileID: 8517849085230424467, guid: a3a9898d217b03c48844d1071b0fcb0c,
         type: 3}
@@ -10030,7 +10055,7 @@ PrefabInstance:
     - target: {fileID: 4831802778303314379, guid: 0c9626c4eaae5e54ba57afd0089c5380,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.2412922
+      value: 1.991
       objectReference: {fileID: 0}
     - target: {fileID: 4831802778303314379, guid: 0c9626c4eaae5e54ba57afd0089c5380,
         type: 3}
@@ -10040,7 +10065,7 @@ PrefabInstance:
     - target: {fileID: 4831802778303314379, guid: 0c9626c4eaae5e54ba57afd0089c5380,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.132131
+      value: -6.36
       objectReference: {fileID: 0}
     - target: {fileID: 4831802778303314379, guid: 0c9626c4eaae5e54ba57afd0089c5380,
         type: 3}
@@ -10050,7 +10075,7 @@ PrefabInstance:
     - target: {fileID: 4831802778303314379, guid: 0c9626c4eaae5e54ba57afd0089c5380,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.76890486
+      value: -0.8805574
       objectReference: {fileID: 0}
     - target: {fileID: 4831802778303314379, guid: 0c9626c4eaae5e54ba57afd0089c5380,
         type: 3}
@@ -10060,7 +10085,7 @@ PrefabInstance:
     - target: {fileID: 4831802778303314379, guid: 0c9626c4eaae5e54ba57afd0089c5380,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.63936317
+      value: 0.47393954
       objectReference: {fileID: 0}
     - target: {fileID: 4831802778303314379, guid: 0c9626c4eaae5e54ba57afd0089c5380,
         type: 3}
@@ -10075,7 +10100,7 @@ PrefabInstance:
     - target: {fileID: 4831802778303314379, guid: 0c9626c4eaae5e54ba57afd0089c5380,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -100.511
+      value: -123.41901
       objectReference: {fileID: 0}
     - target: {fileID: 4831802778303314379, guid: 0c9626c4eaae5e54ba57afd0089c5380,
         type: 3}
@@ -10086,6 +10111,66 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Convex
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9117925565042137066, guid: 0c9626c4eaae5e54ba57afd0089c5380,
+        type: 3}
+      propertyPath: onPickUp.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9117925565042137066, guid: 0c9626c4eaae5e54ba57afd0089c5380,
+        type: 3}
+      propertyPath: onDetachFromHand.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9117925565042137066, guid: 0c9626c4eaae5e54ba57afd0089c5380,
+        type: 3}
+      propertyPath: onPickUp.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9117925565042137066, guid: 0c9626c4eaae5e54ba57afd0089c5380,
+        type: 3}
+      propertyPath: onPickUp.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9117925565042137066, guid: 0c9626c4eaae5e54ba57afd0089c5380,
+        type: 3}
+      propertyPath: onPickUp.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 425595808}
+    - target: {fileID: 9117925565042137066, guid: 0c9626c4eaae5e54ba57afd0089c5380,
+        type: 3}
+      propertyPath: onPickUp.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: toggleHolding
+      objectReference: {fileID: 0}
+    - target: {fileID: 9117925565042137066, guid: 0c9626c4eaae5e54ba57afd0089c5380,
+        type: 3}
+      propertyPath: onPickUp.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 9117925565042137066, guid: 0c9626c4eaae5e54ba57afd0089c5380,
+        type: 3}
+      propertyPath: onDetachFromHand.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9117925565042137066, guid: 0c9626c4eaae5e54ba57afd0089c5380,
+        type: 3}
+      propertyPath: onDetachFromHand.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9117925565042137066, guid: 0c9626c4eaae5e54ba57afd0089c5380,
+        type: 3}
+      propertyPath: onDetachFromHand.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 425595808}
+    - target: {fileID: 9117925565042137066, guid: 0c9626c4eaae5e54ba57afd0089c5380,
+        type: 3}
+      propertyPath: onDetachFromHand.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: toggleHolding
+      objectReference: {fileID: 0}
+    - target: {fileID: 9117925565042137066, guid: 0c9626c4eaae5e54ba57afd0089c5380,
+        type: 3}
+      propertyPath: onDetachFromHand.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c9626c4eaae5e54ba57afd0089c5380, type: 3}

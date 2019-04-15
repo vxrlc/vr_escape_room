@@ -90,7 +90,10 @@ namespace VRKeyboard.Utils {
                 return;
             }
         }
-       
+       public void closeKeyboard()
+        {
+            gameObject.SetActive(false);
+        }
         public void Restart()
         {
             SteamVR_LoadLevel.Begin("VrEscapeRoom");
