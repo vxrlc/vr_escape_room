@@ -14,8 +14,13 @@ public class screwDriver : MonoBehaviour
     public SteamVR_Action_Vibration haptics;
 
     public AudioSource drillSound;
+    float minVol = 0f;
+    float maxVol = 1f;
 
-    
+    float minPitch = 0.5f;
+    float maxPitch = 1.0f;
+
+
 
 
     private Quaternion trigSRot;
@@ -51,7 +56,7 @@ public class screwDriver : MonoBehaviour
             squeeze = actionSqueeze.GetAxis(hand);
             Vibrate(10, 200, 100, SteamVR_Input_Sources.RightHand);
 
-            
+           
         }
 
       
@@ -60,13 +65,19 @@ public class screwDriver : MonoBehaviour
         gameManager.drillRotation = squeeze * triggerRot;
         gameManager.drillTriggerSqueeze = squeeze;
         drillBit.Rotate(0, 0, squeeze * triggerRot, Space.Self);
-      
+
+        float trigPress = squeeze * triggerRot;
+
+        drillSound.volume = Mathf.Lerp(minVol, maxVol, (squeeze/2));
+        drillSound.pitch = Mathf.Lerp(minPitch, maxPitch, (squeeze));
+        
+        
     }
     private void Vibrate(float duration, float frequency, float amplitude, SteamVR_Input_Sources source)
     {
  
         haptics.Execute(0, duration, frequency, amplitude, source);
-        Debug.Log(source);
+       // Debug.Log(source);
     }
    
 }
