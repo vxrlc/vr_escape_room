@@ -54,7 +54,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5924520531973859519}
   - component: {fileID: 126848859035465810}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: drillBit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -644,6 +644,7 @@ MonoBehaviour:
   haptics:
     actionPath: /actions/default/out/Haptic
     needsReinit: 0
+  drillSound: {fileID: 0}
   rotation: 0
   pickUpCollider: {fileID: 3132066661650702666}
 --- !u!1 &5490891028128485100

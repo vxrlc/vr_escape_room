@@ -502,7 +502,7 @@ MonoBehaviour:
   endPosition: {fileID: 1502806106380810174}
   linearMapping: {fileID: 1547669923533044648}
   repositionGameObject: 1
-  maintainMomemntum: 1
+  maintainMomemntum: 0
   momemtumDampenRate: 1
 --- !u!54 &6018794544557896173
 Rigidbody:
