@@ -13,6 +13,8 @@ public class SafeCombo : MonoBehaviour
     public Text GuessNumberDisplay;
     public MeshCollider handle;
     public string Combo;
+    public AudioSource errorSound;
+    public AudioSource unlockSound;
 
     // Start is called before the first frame update
     void Awake()
@@ -22,8 +24,9 @@ public class SafeCombo : MonoBehaviour
         {
             ComboNumArray[i] = ComboRandomNumber();
             Combo += ComboNumArray[i].ToString();
-           // Debug.Log(ComboNumArray[i]);
+            Debug.Log(ComboNumArray[i]);
         }
+        
     }
 
 public int ComboRandomNumber()
@@ -51,6 +54,7 @@ public int ComboRandomNumber()
                 Match = true;
             } else
             {
+                errorSound.Play();
                 // if no match, clear the guess and stop the for loop
                 Match = false;
                 ClearGuess();
@@ -61,6 +65,7 @@ public int ComboRandomNumber()
         // if all numbers match, enable the safe handle
         if (Match)
         {
+            unlockSound.Play();
             handle.enabled = true;
         }
     }

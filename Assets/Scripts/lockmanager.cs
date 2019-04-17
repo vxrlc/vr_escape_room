@@ -12,7 +12,7 @@ public class lockmanager : MonoBehaviour
     public GameObject mechanism;
     public GameManager gameManager;
     public GameObject lockParent;
-
+    AudioSource audioSource;
     private Rigidbody rb;
     private bool unLocked = false;
 
@@ -23,6 +23,7 @@ public class lockmanager : MonoBehaviour
     void Start()
     {
         lockOpen.enabled = false;
+        audioSource = GetComponent<AudioSource>();
 
     }
     private void OnTriggerStay(Collider other)
@@ -53,6 +54,7 @@ public class lockmanager : MonoBehaviour
                 other.transform.parent.GetComponent<keyManager>().unLocked = true;
                 unLocked = true;
                 lockOpen.enabled = true;
+                audioSource.Play();
                 lockParent.GetComponent<destroyLock>().unlocked = true;
                 gameManager.locksUnlocked++;
                 // rb.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeRotationX;

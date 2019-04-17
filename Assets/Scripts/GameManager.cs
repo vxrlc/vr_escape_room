@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         startTime = timer;
-       // spawnDrill();
+      //     spawnDrill();
 
     }
     void spawnDrill()
@@ -59,9 +59,12 @@ public class GameManager : MonoBehaviour
     }
     private void WinGame()
     {
-        keyboard.SetActive(true);
+        Invoke("showKeyboard", 0.5f);
         leaderboard.SetActive(true);
-        Teleport.SetActive(false);
+    }
+    private void showKeyboard()
+    {
+        keyboard.SetActive(true);
     }
     private void LoseGame()
     {

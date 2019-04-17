@@ -8,6 +8,7 @@ public class destroyLock : MonoBehaviour
 {
     Hand playerHand;
     public bool unlocked = false;
+    AudioSource audioSource;
     protected virtual void OnAttachedToHand(Hand hand)
     {
         playerHand = hand;

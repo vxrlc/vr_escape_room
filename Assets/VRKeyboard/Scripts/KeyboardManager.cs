@@ -122,6 +122,7 @@ namespace VRKeyboard.Utils {
                 {
                     passwordText.text = "Inccorrect Password. Please try again.";
                 }
+                inputText.text = "";
             }
             
         }

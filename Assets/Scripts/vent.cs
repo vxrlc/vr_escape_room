@@ -11,6 +11,8 @@ public class vent : MonoBehaviour
     public CircularDrive drive;
     private Interactable interactable;
     public SteamVR_Action_Boolean grabVent;
+    private Rigidbody rb;
+    private bool moving = false;
 
     AudioSource audioSource;
     public AudioClip clip;
@@ -19,16 +21,20 @@ public class vent : MonoBehaviour
     void Start()
     {
         interactable = GetComponent<Interactable>();
+        rb = GetComponent<Rigidbody>();
 
         audioSource = GetComponent<AudioSource>();
 
     }
-    // Update is called once per frame
     
-        void Update()
+    // Update is called once per frame
+
+    void Update()
     {
-
-
+        if (rb.velocity.z > 0.1)
+        {
+            moving = true;
+        }
         if (gameObject.transform.rotation.z <= 0)
         {
 
@@ -36,15 +42,11 @@ public class vent : MonoBehaviour
             ventRigidBody.isKinematic = true;
             drive.outAngle = 0f;
        // } else if (!interactable.isHovering)
-       } else if (!grabVent.GetState(SteamVR_Input_Sources.Any) && gameObject.transform.rotation.z > 0)
+       } else if (gameObject.transform.rotation.z > 0)
        {
             ventRigidBody.useGravity = true;
            ventRigidBody.isKinematic = false;
-    //check to see if sound is already playing - this prevents the weird echo 
-           if (!audioSource.isPlaying)
-            {
-                audioSource.PlayOneShot(clip, 0.5f);
-            }
+    
         }
       
 

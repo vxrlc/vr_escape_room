@@ -10,7 +10,26 @@ public class keyManager : MonoBehaviour
     public bool inLock = false;
     public bool unLocked = false;
     private Rigidbody rb;
-
+    private Vector3 origPos;
+    private Quaternion origRot;
+    private void Start()
+    {
+        rb = gameObject.GetComponent<Rigidbody>();
+    }
+    public void getOrigPos()
+    {
+        origPos = transform.position;
+        origRot = transform.rotation;
+  
+    }
+    public void snapToHand()
+    {
+        rb.velocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+        rb.isKinematic = true;
+        gameObject.transform.position = origPos;
+        gameObject.transform.rotation = origRot;
+    }
     protected virtual void OnAttachedToHand(Hand hand)
     {
         playerHand = hand;
@@ -19,6 +38,8 @@ public class keyManager : MonoBehaviour
    
     private void HandAttachedUpdate()
     {
+        origPos = transform.position;
+        origRot = transform.rotation;
         if (inLock && unLocked)
         {
             Invoke("DestroyKey", 1f);
@@ -31,7 +52,7 @@ public class keyManager : MonoBehaviour
     }
     public void UnFreeze()
     {
-        rb = gameObject.GetComponent<Rigidbody>();
+       
         rb.constraints = RigidbodyConstraints.None;
     }
  }
