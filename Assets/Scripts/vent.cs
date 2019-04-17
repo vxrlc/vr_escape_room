@@ -40,9 +40,14 @@ public class vent : MonoBehaviour
        {
             ventRigidBody.useGravity = true;
            ventRigidBody.isKinematic = false;
-
-            audioSource.PlayOneShot(clip, 0.5f);
+    //check to see if sound is already playing - this prevents the weird echo 
+           if (!audioSource.isPlaying)
+            {
+                audioSource.PlayOneShot(clip, 0.5f);
+            }
         }
+      
+
     }
    
 }

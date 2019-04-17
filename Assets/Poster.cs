@@ -7,11 +7,12 @@ using Valve.VR.InteractionSystem;
 public class Poster : MonoBehaviour
 {
     private CircularDrive cd;
-    public AudioSource squeak;
+    public AudioSource audioSource;
+    public AudioClip clip;
 
     private void Start()
     {
-        squeak.GetComponent<AudioSource>();
+       audioSource.GetComponent<AudioSource>();
         
 
     }
@@ -19,13 +20,12 @@ public class Poster : MonoBehaviour
     {
         cd = gameObject.GetComponent<CircularDrive>();
         cd.outAngle = 0;
-    }
 
-    public void Update()
-    {
-        if(cd.maxAngle == -85)
+        if (cd.maxAngle > 0)
         {
-            squeak.Play();
+            audioSource.PlayOneShot(clip, 0.5f);
         }
     }
+
+   
 }
