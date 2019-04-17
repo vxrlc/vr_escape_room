@@ -9,6 +9,16 @@ public class unscrew : MonoBehaviour
     public Collider collider;
     public GameManager gameManager;
     private bool screwOut = false;
+
+    //this is the sound stuff
+    public AudioClip clip;
+    AudioSource audioSource;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
  
@@ -40,6 +50,9 @@ public class unscrew : MonoBehaviour
             collider.enabled = true;
             gameManager.screwsUnscrewed = gameManager.screwsUnscrewed + 1;
             screwOut = true;
+
+            //plays the sound if the screw is out
+            audioSource.PlayOneShot(clip, 0.5f);
         }
     }
 }
