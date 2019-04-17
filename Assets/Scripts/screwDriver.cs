@@ -66,8 +66,10 @@ public class screwDriver : MonoBehaviour
         gameManager.drillTriggerSqueeze = squeeze;
         drillBit.Rotate(0, 0, squeeze * triggerRot, Space.Self);
 
+        // not used  float trigPress = squeeze * triggerRot;
         
         //sets pitch based on the value of the squeeze single
+        drillSound.pitch = Mathf.Lerp(minPitch, maxPitch, (squeeze));
 
         // drill soudn is always playing, sets vol based on value of squeeze
         drillSound.volume = Mathf.Lerp(minVol, maxVol, (squeeze/2));
