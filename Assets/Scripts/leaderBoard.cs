@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Valve.VR;
 
 public class PlayerInfo
 {
@@ -48,6 +49,8 @@ public class leaderBoard : MonoBehaviour
         userName.text = "";
       
         SortStats();
+
+
     }
     public void SortStats()
     {
@@ -89,6 +92,7 @@ public class leaderBoard : MonoBehaviour
             formattedTime = string.Format("{0:00}:{1:00}:{2:00}", hours, minutes, seconds);
             display.text += collectedStats[i].name + ": " + formattedTime + "\n";
         }
+      
     }
     void LoadLeaderBoard()
     {

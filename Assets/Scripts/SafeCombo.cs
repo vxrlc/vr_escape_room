@@ -15,6 +15,7 @@ public class SafeCombo : MonoBehaviour
     public string Combo;
     public AudioSource errorSound;
     public AudioSource unlockSound;
+    private int keysPressed = 0;
 
     // Start is called before the first frame update
     void Awake()
@@ -57,6 +58,7 @@ public int ComboRandomNumber()
                 errorSound.Play();
                 // if no match, clear the guess and stop the for loop
                 Match = false;
+                keysPressed = 0;
                 ClearGuess();
                 break;
             }
@@ -78,6 +80,11 @@ public int ComboRandomNumber()
             {
                 GuessNumbersArray[i] = NumberKey;
                 GuessNumberDisplay.text += GuessNumbersArray[i] + " ";
+                keysPressed++;
+                if (keysPressed == 4)
+                {
+                    Invoke("SubmitGuess", 0.5f);
+                }
               // Debug.Log("Combo: " + ComboNumArray[i] + "Guess: " + GuessNumbersArray[i]);
                 break;
             }

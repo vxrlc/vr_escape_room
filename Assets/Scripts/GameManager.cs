@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public int locksUnlocked = 0;
     public int locksToWin = 3;
     public GameObject Teleport;
+    public GameObject loseScreen;
 
     public GameObject keyboard;
     public GameObject leaderboard;
@@ -59,6 +60,7 @@ public class GameManager : MonoBehaviour
     }
     private void WinGame()
     {
+        isHolding = false;
         Invoke("showKeyboard", 0.5f);
         leaderboard.SetActive(true);
     }
@@ -68,18 +70,19 @@ public class GameManager : MonoBehaviour
     }
     private void LoseGame()
     {
-        keyboard.SetActive(true);
+        loseScreen.SetActive(true);
         leaderboard.SetActive(true);
         Teleport.SetActive(false);
     }
     private void Update()
     {
+        Debug.Log(isHolding);
         if (locksToWin == locksUnlocked)
         {
             winGame = true;
             WinGame();
         }
-        if (!winGame && timer >= 0f)
+        else if (!winGame && timer >= 0f)
         {
             // countdown timer logic
             timer -= Time.deltaTime;

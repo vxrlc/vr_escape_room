@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
+    path: Assets/Scenes/menu.unity
+    guid: b3a5a8e0c17af3740afbc62a5feb1cb6
+  - enabled: 1
     path: Assets/Scenes/VrEscapeRoom.unity
     guid: 665d6c64fdb57e043a9ffd153f5203be
   m_configObjects: {}

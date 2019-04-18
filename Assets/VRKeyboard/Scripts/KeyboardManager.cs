@@ -94,14 +94,7 @@ namespace VRKeyboard.Utils {
         {
             gameObject.SetActive(false);
         }
-        public void Restart()
-        {
-            SteamVR_LoadLevel.Begin("VrEscapeRoom");
-        }
-        public void QuitGame()
-        {
-            UnityEditor.EditorApplication.isPlaying = false;
-        }
+       
 
         public void Clear() {
             Input = "";
@@ -112,6 +105,7 @@ namespace VRKeyboard.Utils {
           if (gameManager.winGame)
             {
                 leaderBoard.GetComponent<leaderBoard>().SubmitButton();
+                Invoke("loadMenu", 1.0f);
             } else
             {
                 if (screen.GetComponent<screenUnlock>().enterPassword(inputText.text))
@@ -125,6 +119,10 @@ namespace VRKeyboard.Utils {
                 inputText.text = "";
             }
             
+        }
+        void loadMenu()
+        {
+            SteamVR_LoadLevel.Begin("menu");
         }
         private void hideKeyboard()
         {

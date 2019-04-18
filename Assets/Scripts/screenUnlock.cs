@@ -28,8 +28,6 @@ public class screenUnlock : MonoBehaviour
     public bool enterPassword(string enteredPassword)
     {
         passwordIndex = phone.GetComponent<phoneSound>().pNum;
-        Debug.Log("index " + passwordIndex);
-        Debug.Log("entered " + enteredPassword + " " + "correct " + computerPassword[passwordIndex]);
         if (computerPassword[passwordIndex] == enteredPassword)
         {
             origMat = GetComponent<MeshRenderer>().materials;

@@ -15,6 +15,7 @@ public class lockmanager : MonoBehaviour
     AudioSource audioSource;
     private Rigidbody rb;
     private bool unLocked = false;
+    private int count = 0;
 
     
    
@@ -26,27 +27,12 @@ public class lockmanager : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
 
     }
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.transform != null)
-        { 
-            if (other.transform.parent.GetComponent<keyManager>().inLock)
-            {
-                     
-               //// if (other.transform.parent.rotation.eulerAngles.y >= (keyStartRotation.y + 90) && !unLocked)
-               //// {
-                                  //// Unlock();
-                   // other.transform.parent.GetComponent<keyManager>().unLocked = true;
-                   // unLocked = true;
-               // }
-            }
-        }
-    }
+   
     private void OnTriggerEnter(Collider other)
     {
         if (other.transform.parent != null)
         {
-            if (transform.parent.tag == other.transform.parent.tag)
+            if (transform.parent.tag == other.transform.parent.tag && count == 0)
             {
                 //keyStartRotation = other.transform.parent.rotation.eulerAngles;
                 ////= rb = other.transform.parent.GetComponent<Rigidbody>();
@@ -57,8 +43,9 @@ public class lockmanager : MonoBehaviour
                 audioSource.Play();
                 lockParent.GetComponent<destroyLock>().unlocked = true;
                 gameManager.locksUnlocked++;
+                gameManager.toggleHolding();
                 // rb.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeRotationX;
-
+                count++;
             }
         }
        

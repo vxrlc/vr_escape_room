@@ -47,12 +47,14 @@ public class keyManager : MonoBehaviour
     }
     private void DestroyKey()
     {
-        playerHand.DetachObject(this.gameObject);
+       playerHand.DetachObject(this.gameObject);
+        
         Destroy(this.gameObject);
     }
     public void UnFreeze()
     {
        
         rb.constraints = RigidbodyConstraints.None;
+       
     }
  }

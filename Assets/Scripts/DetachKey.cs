@@ -12,7 +12,9 @@ public class DetachKey : MonoBehaviour
        
         transform.parent = null;
         rigidBody.isKinematic = false;
-        rigidBody.useGravity = true;
+        rigidBody.velocity = Vector3.zero;
+        rigidBody.angularVelocity = Vector3.zero;
+        //rigidBody.useGravity = true;
     }
     public void DropKey()
     {

@@ -119,6 +119,7 @@ MonoBehaviour:
   setRangeOfMotionOnPickup: -1
   useHandObjectAttachmentPoint: 1
   useTwoHands: 0
+  childToAttach: {fileID: 0}
   attachEaseIn: 0
   snapAttachEaseInCurve:
     serializedVersion: 2
@@ -327,7 +328,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 62ef622dede60094f8fba809f7bab959, type: 2}
+  - {fileID: 2100000, guid: a209a7c686516d045982db1f343b6cbf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
