@@ -12,9 +12,11 @@
         "IntegrationSavePath": "C:\\Unity Projects\\vr_escape_room_mike\\vr_escape_room",
         "selectedDCCApp": 0,
         "prefabSavePaths": [
+            "Prefabs",
             "."
         ],
         "fbxSavePaths": [
+            "Objects",
             "."
         ],
         "selectedFbxPath": 0,
