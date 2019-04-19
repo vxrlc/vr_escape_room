@@ -11,7 +11,9 @@ public class screwDriver : MonoBehaviour
     public Transform drillBit;
     public float squeeze = 0;
     public SteamVR_Action_Single actionSqueeze = SteamVR_Input.GetAction<SteamVR_Action_Single>("default", "Squeeze");
-    public SteamVR_Action_Vibration haptics;
+  
+   
+    
 
     public AudioSource drillSound;
     float minVol = 0f;
@@ -19,6 +21,8 @@ public class screwDriver : MonoBehaviour
 
     float minPitch = 0.5f;
     float maxPitch = 1.0f;
+
+ 
 
 
 
@@ -47,16 +51,15 @@ public class screwDriver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
        
+
         squeeze = 0;
         if (interactable.attachedToHand)
         {
            SteamVR_Input_Sources hand = interactable.attachedToHand.handType;
 
             squeeze = actionSqueeze.GetAxis(hand);
-            Vibrate(10, 200, 100, SteamVR_Input_Sources.RightHand);
-
-           
         }
 
       
@@ -68,19 +71,16 @@ public class screwDriver : MonoBehaviour
 
        
       //sets pitch based on the value of the squeeze single
-        drillSound.pitch = Mathf.Lerp(minPitch, maxPitch, (squeeze));
+        drillSound.pitch = Mathf.Lerp(minPitch, maxPitch, squeeze);
 
         // drill soudn is always playing, sets vol based on value of squeeze
         drillSound.volume = Mathf.Lerp(minVol, maxVol, (squeeze/2));
-      
+
+       
         
-        
+
+
     }
-    private void Vibrate(float duration, float frequency, float amplitude, SteamVR_Input_Sources source)
-    {
- 
-        haptics.Execute(0, duration, frequency, amplitude, source);
-       // Debug.Log(source);
-    }
-   
+
+    
 }
