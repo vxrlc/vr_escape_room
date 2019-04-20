@@ -6,15 +6,27 @@ ModelImporter:
     100000: //RootNode
     400000: //RootNode
     2100000: lambert1
+    2100002: marker_body
+    2100004: marker_cap
     2300000: //RootNode
     3300000: //RootNode
     4300000: marker
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: marker_body
+    second: {fileID: 2100000, guid: 36b94e44282550b46bb5df74064b06b4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: marker_cap
+    second: {fileID: 2100000, guid: 470c396ed36aa544d860086e15e71cbd, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0

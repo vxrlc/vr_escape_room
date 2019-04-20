@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject[] drillSpawnPoints;
     public GameObject drillPrefab;
+    public bool drillActive = false;
+    
 
     public int screwsUnscrewed = 0;
 
@@ -76,7 +78,7 @@ public class GameManager : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log(isHolding);
+        //Debug.Log(isHolding);
         if (locksToWin == locksUnlocked)
         {
             winGame = true;

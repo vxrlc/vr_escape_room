@@ -3,98 +3,11 @@
    "app_key" : "application.generated.unity.test.exe",
    "bindings" : {
       "/actions/buggy" : {
-         "sources" : [
-            {
-               "inputs" : {
-                  "pull" : {
-                     "output" : "/actions/buggy/in/throttle"
-                  }
-               },
-               "mode" : "trigger",
-               "path" : "/user/hand/left/input/trigger"
-            },
-            {
-               "inputs" : {
-                  "pull" : {
-                     "output" : "/actions/buggy/in/throttle"
-                  }
-               },
-               "mode" : "trigger",
-               "path" : "/user/hand/right/input/trigger"
-            },
-            {
-               "inputs" : {
-                  "position" : {
-                     "output" : "/actions/buggy/in/steering"
-                  }
-               },
-               "mode" : "joystick",
-               "path" : "/user/hand/left/input/joystick"
-            },
-            {
-               "inputs" : {
-                  "position" : {
-                     "output" : "/actions/buggy/in/steering"
-                  }
-               },
-               "mode" : "joystick",
-               "path" : "/user/hand/right/input/joystick"
-            },
-            {
-               "inputs" : {
-                  "click" : {
-                     "output" : "/actions/buggy/in/brake"
-                  }
-               },
-               "mode" : "button",
-               "path" : "/user/hand/left/input/x"
-            },
-            {
-               "inputs" : {
-                  "click" : {
-                     "output" : "/actions/buggy/in/brake"
-                  }
-               },
-               "mode" : "button",
-               "path" : "/user/hand/right/input/x"
-            },
-            {
-               "inputs" : {
-                  "click" : {
-                     "output" : "/actions/buggy/in/reset"
-                  }
-               },
-               "mode" : "button",
-               "path" : "/user/hand/left/input/y"
-            },
-            {
-               "inputs" : {
-                  "click" : {
-                     "output" : "/actions/buggy/in/reset"
-                  }
-               },
-               "mode" : "button",
-               "path" : "/user/hand/right/input/y"
-            },
-            {
-               "inputs" : {
-                  "click" : {
-                     "output" : "/actions/buggy/in/brake"
-                  }
-               },
-               "mode" : "button",
-               "path" : "/user/hand/right/input/a"
-            },
-            {
-               "inputs" : {
-                  "click" : {
-                     "output" : "/actions/buggy/in/reset"
-                  }
-               },
-               "mode" : "button",
-               "path" : "/user/hand/right/input/b"
-            }
-         ]
+         "chords" : [],
+         "haptics" : [],
+         "poses" : [],
+         "skeleton" : [],
+         "sources" : []
       },
       "/actions/default" : {
          "chords" : [],
@@ -131,22 +44,11 @@
          "sources" : [
             {
                "inputs" : {
-                  "touch" : {
-                     "output" : "/actions/default/in/showpointer"
-                  }
-               },
-               "mode" : "button",
-               "parameters" : {
-                  "haptic_amplitude" : "1",
-                  "haptic_duration" : "3.2",
-                  "haptic_frequency" : "316"
-               },
-               "path" : "/user/hand/left/input/trigger"
-            },
-            {
-               "inputs" : {
                   "click" : {
                      "output" : "/actions/default/in/grabgrip"
+                  },
+                  "held" : {
+                     "output" : "/actions/default/in/grabhold"
                   }
                },
                "mode" : "button",
@@ -155,11 +57,6 @@
                   "click_deactivate_threshold" : "0.7",
                   "force_input" : "force"
                },
-               "path" : "/user/hand/left/input/grip"
-            },
-            {
-               "inputs" : {},
-               "mode" : "trigger",
                "path" : "/user/hand/left/input/grip"
             },
             {
@@ -187,22 +84,15 @@
                "path" : "/user/hand/left/input/trigger"
             },
             {
-               "inputs" : {},
-               "mode" : "none",
-               "path" : "/user/hand/left/input/skeleton/left"
-            },
-            {
                "inputs" : {
                   "click" : {
                      "output" : "/actions/default/in/grabgrip"
+                  },
+                  "held" : {
+                     "output" : "/actions/default/in/grabhold"
                   }
                },
                "mode" : "button",
-               "path" : "/user/hand/right/input/grip"
-            },
-            {
-               "inputs" : {},
-               "mode" : "trigger",
                "path" : "/user/hand/right/input/grip"
             },
             {
@@ -213,25 +103,6 @@
                },
                "mode" : "button",
                "path" : "/user/hand/right/input/joystick"
-            },
-            {
-               "inputs" : {},
-               "mode" : "none",
-               "path" : "/user/hand/right/input/skeleton/left"
-            },
-            {
-               "inputs" : {
-                  "touch" : {
-                     "output" : "/actions/default/in/showpointer"
-                  }
-               },
-               "mode" : "button",
-               "parameters" : {
-                  "haptic_amplitude" : "1",
-                  "haptic_duration" : "3.2",
-                  "haptic_frequency" : "316"
-               },
-               "path" : "/user/hand/right/input/trigger"
             },
             {
                "inputs" : {
@@ -251,45 +122,18 @@
          ]
       },
       "/actions/platformer" : {
-         "sources" : [
-            {
-               "inputs" : {
-                  "click" : {
-                     "output" : "/actions/platformer/in/jump"
-                  },
-                  "position" : {
-                     "output" : "/actions/platformer/in/move"
-                  }
-               },
-               "mode" : "joystick",
-               "path" : "/user/hand/left/input/joystick"
-            },
-            {
-               "inputs" : {
-                  "click" : {
-                     "output" : "/actions/platformer/in/jump"
-                  },
-                  "position" : {
-                     "output" : "/actions/platformer/in/move"
-                  }
-               },
-               "mode" : "joystick",
-               "path" : "/user/hand/right/input/joystick"
-            }
-         ]
+         "chords" : [],
+         "haptics" : [],
+         "poses" : [],
+         "skeleton" : [],
+         "sources" : []
       },
       "/actions/vr_escape_room" : {
-         "sources" : [
-            {
-               "inputs" : {
-                  "click" : {
-                     "output" : "/actions/vr_escape_room/in/teleport"
-                  }
-               },
-               "mode" : "trigger",
-               "path" : "/user/hand/right/input/trigger"
-            }
-         ]
+         "chords" : [],
+         "haptics" : [],
+         "poses" : [],
+         "skeleton" : [],
+         "sources" : []
       }
    },
    "controller_type" : "oculus_touch",

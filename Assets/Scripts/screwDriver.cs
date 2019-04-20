@@ -62,7 +62,14 @@ public class screwDriver : MonoBehaviour
             squeeze = actionSqueeze.GetAxis(hand);
         }
 
-      
+        if (squeeze  >= 0.002)
+        {
+           
+            gameManager.drillActive = true;
+        } else
+        {
+            gameManager.drillActive = false;
+        }
         modelTrigger.localRotation = trigSRot;
         modelTrigger.Rotate(squeeze * triggerRot, 0, 0, Space.Self);
         gameManager.drillRotation = squeeze * triggerRot;

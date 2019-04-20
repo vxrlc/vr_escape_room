@@ -40,6 +40,10 @@
       "type": "boolean"
     },
     {
+      "name": "/actions/default/in/GrabHold",
+      "type": "boolean"
+    },
+    {
       "name": "/actions/default/out/Haptic",
       "type": "vibration"
     }
@@ -81,7 +85,8 @@
       "/actions/default/out/Haptic": "Haptic",
       "/actions/default/in/Squeeze": "Squeeze",
       "/actions/default/in/pointerActivate": "laser",
-      "/actions/default/in/PointerActivate": "Pointer Activate"
+      "/actions/default/in/PointerActivate": "Pointer Activate",
+      "/actions/default/in/GrabHold": "Grab Hold"
     }
   ]
 }

@@ -32,10 +32,7 @@ public class hitTest : MonoBehaviour
         }
        
     }
-    void Vibrate()
-    {
-        Handheld.Vibrate();
-    }
+    
     private void Update()
     {
         if (!fireworks.isPlaying)
