@@ -1,0 +1,242 @@
+fileFormatVersion: 2
+guid: 50c662f3c0469584a9f1b3718f197051
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: backPort
+    100002: backPort1
+    100004: backPort2
+    100006: backPort3
+    100008: backPorts
+    100010: baseWhole
+    100012: bottomBase
+    100014: bottomLogo
+    100016: celingMountBase
+    100018: celingMountBaseBase
+    100020: celingMountBaseSupport
+    100022: celingMountTube
+    100024: celingMountWhole
+    100026: lens
+    100028: lens.001
+    100030: lensBase
+    100032: lensBase1
+    100034: lensFrame
+    100036: lensFrameDetail
+    100038: mainBase
+    100040: //RootNode
+    100042: sideVentDetail
+    100044: sideVentsBackL
+    100046: sideVentsBackR
+    100048: sideVentsBackTop
+    100050: sideVentsFrontL
+    100052: sideVentsFrontR
+    100054: sideVentsL
+    100056: sideVentsR
+    100058: ventLback
+    100060: ventLback.006
+    100062: ventSideL8.002
+    400000: backPort
+    400002: backPort1
+    400004: backPort2
+    400006: backPort3
+    400008: backPorts
+    400010: baseWhole
+    400012: bottomBase
+    400014: bottomLogo
+    400016: celingMountBase
+    400018: celingMountBaseBase
+    400020: celingMountBaseSupport
+    400022: celingMountTube
+    400024: celingMountWhole
+    400026: lens
+    400028: lens.001
+    400030: lensBase
+    400032: lensBase1
+    400034: lensFrame
+    400036: lensFrameDetail
+    400038: mainBase
+    400040: //RootNode
+    400042: sideVentDetail
+    400044: sideVentsBackL
+    400046: sideVentsBackR
+    400048: sideVentsBackTop
+    400050: sideVentsFrontL
+    400052: sideVentsFrontR
+    400054: sideVentsL
+    400056: sideVentsR
+    400058: ventLback
+    400060: ventLback.006
+    400062: ventSideL8.002
+    2100000: metal
+    2100002: greyPlastic
+    2100004: darkPlastic
+    2100006: lens
+    2100008: ventDetail
+    2300000: backPort
+    2300002: backPort1
+    2300004: backPort2
+    2300006: backPort3
+    2300008: bottomBase
+    2300010: bottomLogo
+    2300012: celingMountBase
+    2300014: celingMountBaseBase
+    2300016: celingMountBaseSupport
+    2300018: celingMountTube
+    2300020: lens.001
+    2300022: lensBase
+    2300024: lensBase1
+    2300026: lensFrame
+    2300028: lensFrameDetail
+    2300030: mainBase
+    2300032: ventLback
+    2300034: ventLback.006
+    2300036: ventSideL8.002
+    3300000: backPort
+    3300002: backPort1
+    3300004: backPort2
+    3300006: backPort3
+    3300008: bottomBase
+    3300010: bottomLogo
+    3300012: celingMountBase
+    3300014: celingMountBaseBase
+    3300016: celingMountBaseSupport
+    3300018: celingMountTube
+    3300020: lens.001
+    3300022: lensBase
+    3300024: lensBase1
+    3300026: lensFrame
+    3300028: lensFrameDetail
+    3300030: mainBase
+    3300032: ventLback
+    3300034: ventLback.006
+    3300036: ventSideL8.002
+    4300000: bottomBase
+    4300002: mainBase
+    4300004: bottomLogo
+    4300006: lensFrame
+    4300008: lensBase
+    4300010: lensBase1
+    4300012: lens.001
+    4300014: lensFrameDetail
+    4300016: ventLback
+    4300018: ventSideL8.002
+    4300020: ventLback.006
+    4300022: backPort3
+    4300024: backPort2
+    4300026: backPort1
+    4300028: backPort
+    4300030: celingMountBase
+    4300032: celingMountBaseSupport
+    4300034: celingMountBaseBase
+    4300036: celingMountTube
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: darkPlastic
+    second: {fileID: 2100000, guid: 37d20d6dfdc3ca4478db92e9b6459c8c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: greyPlastic
+    second: {fileID: 2100000, guid: 4555f28f0b591614e8d5e3e9a845a1f5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lens
+    second: {fileID: 2100000, guid: 61a92ffb20b148e4fa7fccda81428b90, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metal
+    second: {fileID: 2100000, guid: 37d20d6dfdc3ca4478db92e9b6459c8c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ventDetail
+    second: {fileID: 2100000, guid: 37d20d6dfdc3ca4478db92e9b6459c8c, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

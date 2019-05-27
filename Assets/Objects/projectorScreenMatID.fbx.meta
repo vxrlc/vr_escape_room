@@ -1,0 +1,182 @@
+fileFormatVersion: 2
+guid: e7a4ec2b525722543a49e461b837de4f
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: baseBottom
+    100002: baseBottomEndL
+    100004: baseBottomEnds
+    100006: baseRightEndR
+    100008: baseTop
+    100010: baseTopEndL
+    100012: baseTopEndR
+    100014: baseTopEnds
+    100016: baseWhole
+    100018: handle
+    100020: handleWhole
+    100022: //RootNode
+    100024: screenBaseBottom
+    100026: screenBaseTop
+    100028: screenBorder
+    100030: screenFront
+    100032: screenWhole
+    400000: baseBottom
+    400002: baseBottomEndL
+    400004: baseBottomEnds
+    400006: baseRightEndR
+    400008: baseTop
+    400010: baseTopEndL
+    400012: baseTopEndR
+    400014: baseTopEnds
+    400016: baseWhole
+    400018: handle
+    400020: handleWhole
+    400022: //RootNode
+    400024: screenBaseBottom
+    400026: screenBaseTop
+    400028: screenBorder
+    400030: screenFront
+    400032: screenWhole
+    2100000: mainBase
+    2100002: lambert1
+    2100004: screenMesh
+    2100006: screenFrame
+    2100008: MetalHandle
+    2300000: baseBottomEndL
+    2300002: baseRightEndR
+    2300004: baseTopEndL
+    2300006: baseTopEndR
+    2300008: handle
+    2300010: screenBaseBottom
+    2300012: screenBaseTop
+    2300014: screenBorder
+    2300016: screenFront
+    3300000: baseBottomEndL
+    3300002: baseRightEndR
+    3300004: baseTopEndL
+    3300006: baseTopEndR
+    3300008: handle
+    3300010: screenBaseBottom
+    3300012: screenBaseTop
+    3300014: screenBorder
+    3300016: screenFront
+    4300000: screenBaseTop
+    4300002: baseTopEndL
+    4300004: baseTopEndR
+    4300006: screenBaseBottom
+    4300008: baseBottomEndL
+    4300010: baseRightEndR
+    4300012: screenFront
+    4300014: screenBorder
+    4300016: handle
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MetalHandle
+    second: {fileID: 2100000, guid: a0923d13a9397bb4299b7b86002a324b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 37d20d6dfdc3ca4478db92e9b6459c8c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mainBase
+    second: {fileID: 2100000, guid: 201ee400f6a38404bbf38ecc962fdf10, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: screenFrame
+    second: {fileID: 2100000, guid: 37d20d6dfdc3ca4478db92e9b6459c8c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: screenMesh
+    second: {fileID: 2100000, guid: 201ee400f6a38404bbf38ecc962fdf10, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 10
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

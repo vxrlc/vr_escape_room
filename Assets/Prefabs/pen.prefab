@@ -103,6 +103,7 @@ MonoBehaviour:
   setRangeOfMotionOnPickup: -1
   useHandObjectAttachmentPoint: 1
   useTwoHands: 0
+  childToAttach: {fileID: 0}
   attachEaseIn: 0
   snapAttachEaseInCurve:
     serializedVersion: 2

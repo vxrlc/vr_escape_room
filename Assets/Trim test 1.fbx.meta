@@ -1,21 +1,26 @@
 fileFormatVersion: 2
-guid: bae71ea0587fe2b4bb04051721579e54
+guid: 3f109aecc38759949842871cb9be20d7
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: lambert1
+    2100000: Metal
+    2100002: Plastic
     2300000: //RootNode
     3300000: //RootNode
-    4300000: soloCup
-    6400000: //RootNode
+    4300000: Cube.005
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: lambert1
-    second: {fileID: 2100000, guid: fcc16fcd34e07f04881db2072b6571b8, type: 2}
+      name: Metal
+    second: {fileID: 2100000, guid: a0923d13a9397bb4299b7b86002a324b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plastic
+    second: {fileID: 2100000, guid: 37d20d6dfdc3ca4478db92e9b6459c8c, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -55,7 +60,7 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
