@@ -31,6 +31,7 @@ using UnityEngine;
             phoneMessage = messages[pNum];
 
             audioSource.clip = phoneMessage;
+        audioSource.volume = 1.0f;
 
             audioSource.Play();
         }

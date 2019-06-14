@@ -13,6 +13,8 @@ public class vent : MonoBehaviour
     public SteamVR_Action_Boolean grabVent;
     private Rigidbody rb;
     private bool moving = false;
+    public GameManager gameManager;
+    public Collider col;
 
     AudioSource audioSource;
     public AudioClip clip;
@@ -31,6 +33,10 @@ public class vent : MonoBehaviour
 
     void Update()
     {
+        if (gameManager.screwsUnscrewed == 2)
+        {
+            col.enabled = true;
+        }
         if (rb.velocity.z > 0.1)
         {
             moving = true;
